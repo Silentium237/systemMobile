@@ -1,0 +1,44 @@
+.mainTextOffer {
+
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (35 - 20) + 20px);
+    font-weight: 700;
+    line-height: calc( (100vw - 768px)/(1900 - 768) * (47 - 24) + 24px);
+    letter-spacing: 0em;
+    text-align: left;
+    color: #125E97;
+    width: calc( (100vw - 768px)/(1900 - 768) * (800 - 400) + 400px);
+    max-height: 119px;
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (105 - 50) + 50px);
+    padding-left: calc( (100vw - 768px)/(1900 - 768) * (120 - 60) + 60px);
+    text-transform: uppercase;
+}
+.mainTextOfferMobile {
+
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (35 - 25) + 25px);
+    font-weight: 700;
+    line-height: 33px;
+    color: #125E97;
+    padding-top: calc( (100vw - 300px)/(1900 - 300) * (105 - 70) + 70px);
+    padding-left: calc( (100vw - 768px)/(1900 - 768) * (120 - 60) + 60px);
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+.mainDiv {
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (244 - 175) + 175px);
+}
+.mainDivMobile {
+    padding-top: 70px;
+}
+
+@media screen and (max-width: 815px) {
+    .mainDiv {
+        display: none;
+    }
+
+}
+@media screen and (min-width: 815px) {
+    .mainDivMobile {
+        display: none;
+    }
+
+}

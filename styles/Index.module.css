@@ -1,0 +1,333 @@
+.divMain {
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+    top: calc( (100vw - 480px)/(1900 - 480) * (438 - 200) + 200px);
+    padding-left: calc( (100vw - 300px)/(1900 - 300) * (420 - 30) + 30px);
+}
+
+.mainText1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 300px)/(1900 - 300) * (70 - 20) + 20px);
+    line-height: calc( (100vw - 300px)/(1900 - 300) * (95 - 20) + 20px);
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.mainText2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 130%;
+    color: #125E97
+}
+.subMainText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 155%;
+    color: #FFFFFF;
+}
+.buttonConsult {
+    position: absolute;
+    width: 355px;
+    height: 70px;
+    left: 26.56%;
+    right: 43.28%;
+    top: 551px;
+    background: #125E97;
+    border: 0px;
+}
+.buttonConsult:hover {
+    background-color: #0089EF;
+}
+
+.buttonText {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.numberActive {
+    position: absolute;
+    left: calc( (100vw - 300px)/(1900 - 300) * (300 - 15) + 15px);
+    top: calc( (100vw - 300px)/(1900 - 300) * (850 - 300) + 250px);
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 300px)/(1900 - 300) * (35 - 18) + 18px);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: white;
+    /*color: #125E97;*/
+}
+.numberNotActive {
+    position: absolute;
+    left: calc( (100vw - 300px)/(1900 - 300) * (300 - 50) + 50px);
+    top: calc( (100vw - 300px)/(1900 - 300) * (850 - 300) + 250px);
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 300px)/(1900 - 300) * (35 - 18) + 18px);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+.buttonLeft {
+    position: absolute;
+    width: calc( (100vw - 300px)/(1900 - 300) * (72 - 45) + 45px);
+    height: calc( (100vw - 300px)/(1900 - 300) * (72 - 45) + 45px);
+    margin-left: calc( (100vw - 300px)/(1900 - 300) * (1300 - 150) + 150px);
+    top: calc( (100vw - 300px)/(1900 - 300) * (850 - 300) + 250px);
+    border: 0px;
+}
+
+.buttonLeft:hover {
+    background-color: #006DBF;
+}
+
+.buttonRight {
+    border: 0px;
+    position: absolute;
+    width: calc( (100vw - 300px)/(1900 - 300) * (72 - 45) + 45px);
+    height: calc( (100vw - 300px)/(1900 - 300) * (72 - 45) + 45px);
+    margin-left: calc( (100vw - 300px)/(1900 - 300) * (1400 - 220) + 220px);
+    top: calc( (100vw - 300px)/(1900 - 300) * (850 - 300) + 250px);
+}
+
+.buttonRight:hover {
+    background-color: #006DBF;
+}
+
+.divForForm {
+    position: absolute;
+    width: calc( (100vw - 480px)/(1900 - 480) * (1040 - 520) + 520px);
+    height: calc( (100vw - 480px)/(1900 - 480) * (215 - 150) + 150px);
+    left: calc( (100vw - 480px)/(1900 - 480) * (435));
+    top:  calc( (100vw - 480px)/(1900 - 480) * (980 - 520) + 520px);
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.1), 0px 20px 50px rgba(178, 179, 179, 0.1);
+}
+
+.inputButton {
+    width: calc( (100vw - 480px)/(1900 - 480) * (300 - 200) + 200px);
+    height: calc( (100vw - 480px)/(1900 - 480) * (56 - 30) + 30px);
+
+    margin-left: 40px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    border: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #0089EF;
+}
+
+.inputButtonMobileWriteMe {
+    width: 90%;
+    height: 56px;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    border: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #0089EF;
+}
+.inputButtonMobile {
+    width: 260px;
+    height: 56px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    border: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #0089EF;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+
+
+.inputHeaderText {
+    padding-top: 60px;
+    padding-left: 58px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc( (100vw - 480px)/(1900 - 480) * (16 - 14) + 14px);
+    line-height: 135%;
+    color: #000000;
+}
+.textWhoWeAreMain {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 480px)/(1900 - 480) * (35 - 28) + 28px);
+    line-height: 150%;
+    /*text-decoration: underline;*/
+    text-transform: uppercase;
+    color: #125E97;
+}
+
+.subTextWhoWeAreMain {
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc( (100vw - 480px)/(1900 - 480) * (16 - 12) + 12px);
+    line-height: 155%;
+    color: rgba(0, 0, 0, 0.8);
+}
+.subTextWhoWeAreMainMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    width:calc( (100vw - 400px)/(1900 - 300) * (1900 - 350) + 350px);
+}
+.imgStyle {
+    position: absolute;
+    width: calc( (100vw - 768px)/(1900 - 768) * (440 - 300) + 300px);
+    height: calc( (100vw - 768px)/(1900 - 768) * (508 - 350) + 350px);
+    margin-left: calc( (100vw - 300px)/(1900 - 300) * (40 - 50) + 50px);
+    top: calc( (100vw - 350px)/(1900 - 350) * (1350 - 850) + 850px);
+    z-index: 1;
+    background: linear-gradient(134.35deg, rgba(0, 146, 255, 0.5) -46.81%, #0080DF 39.75%);
+    opacity: 0.1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.textSellwin {
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 480px)/(1900 - 480) * (35 - 28) + 28px);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #125E97;
+    padding-bottom: calc( (100vw - 480px)/(1900 - 480) * (200 - 70) + 70px);
+}
+.textSellwinMobile {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 480px)/(1900 - 480) * (35 - 25) + 25px);
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #125E97;
+    /*padding-bottom: calc( (100vw - 480px)/(1900 - 480) * (200 - 50) + 50px);*/
+    padding-top: calc( (100vw - 300px)/(1900 - 300) * (300 - 100) + 100px);
+    margin-left: 5%;
+}
+.textSellwinDescription {
+    align-items: center;
+    margin: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc( (100vw - 480px)/(1900 - 480) * (20 - 14) + 14px);
+    line-height: 170%;
+    color: rgba(0, 0, 0, 0.9);
+    padding-right: calc( (100vw - 480px)/(1900 - 480) * (160 - 0) + 0px);
+    padding-bottom: calc( (100vw - 480px)/(1900 - 480) * (105 - 40) + 40px);
+    padding-left: 10px;
+    width: 40%;
+}
+
+.textSellwinDescriptionMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc( (100vw - 300px)/(1900 - 300) * (20 - 18) + 18px);
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.9);
+    /*padding-right: calc( (100vw - 480px)/(1900 - 480) * (160 - 0) + 0px);*/
+    /*padding-bottom: calc( (100vw - 480px)/(1900 - 480) * (105 - 40) + 40px);*/
+    margin-left: 5%;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.connectButton {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Open Sans";
+    color: white;
+    background-color: #0089EF;
+    text-align: center;
+    height: 56px;
+    width: 296px;
+    padding-top: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    top: calc( (100vw - 300px)/(1900 - 300) * (1084 - 300) + 300px);
+}
+
+.whoWeAreMainDiv {
+    display: flex;
+    margin: auto;
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (300 - 175) + 175px);
+    width: calc( (100vw - 768px)/(1900 - 768) * (1084 - 768) + 768px);
+}
+.whoWeAreMainDivMobile {
+    padding-left: 15px;
+    margin: auto;
+    padding-top: calc( (100vw - 300px)/(1900 - 300) * (300 - 50) + 50px);
+    width: 95%;
+}
+.divLineInfoFirst {
+    height: calc( (100vw - 768px)/(2400 - 768) * (370 - 150) + 150px);
+    margin-top: calc( (100vw - 768px)/(2400 - 768) * (250 - 150) + 150px);
+}
+.divLineInfoFirstMobile {
+    margin-top: calc( (100vw - 768px)/(2400 - 768) * (250 - 150) + 150px);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainDivLineInfoSecond {
+    height: calc( (100vw - 768px)/(2400 - 768) * (370 - 150) + 150px);
+    margin-top: calc( (100vw - 768px)/(2400 - 768) * (250 - 150) + 150px);
+}
+
+
+@media screen and (min-width: 815px) {
+    .connectButton {
+        display: none;
+    }
+    .whoWeAreMainDivMobile{
+        display: none;
+    }
+    .divLineInfoFirstMobile {
+        display: none;
+    }
+
+}
+@media screen and (max-width: 815px) {
+    .divForForm {
+        display: none;
+    }
+    .whoWeAreMainDiv {
+        display: none;
+    }
+    .divLineInfoFirst {
+        display: none;
+    }
+    .mainDivLineInfoSecond {
+        display: none;
+    }
+}

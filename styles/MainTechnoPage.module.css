@@ -1,0 +1,167 @@
+.mainDiv {
+    margin-left: 5%;
+}
+.cardTechno {
+    margin-top: 40px;
+    width: 522px;
+    height: 470px;
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+    margin: 10px;
+}
+
+.cardTechnoMobile {
+    margin-top: 40px;
+    width: 90%;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.titleCardTechno {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #0092FF ;
+    width: 522px;
+    height: 94px;
+    color: #FFFFFF;
+    padding-top: 30px;
+}
+
+.titleCardTechnoMobile {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    background-color: #0092FF ;
+    width: 100%;
+    height: 73px;
+    color: #FFFFFF;
+    padding-top: 25px;
+    margin-right: 5%;
+    text-align: left;
+    padding-left: 5%;
+}
+.li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px;
+    margin-left: 92px;
+    color: #000000;
+}
+.liMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px;
+    margin-left: 2%;
+    color: #000000;
+}
+.cardTechnologies {
+    width: 522px;
+    height: 695px;
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+    margin: 10px;
+}
+.cardTechnologiesMobile {
+    width: 95%;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+}
+.titleCardTechnologies {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 40px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.titleCardTechnologiesMobile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.subTitleCardTechnologies {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.8);
+    padding-left: 40px;
+    margin: 0; /* Убираем внешний отступ */
+    -webkit-line-clamp: 5; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+}
+.subTitleCardTechnologiesMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 5%;
+    -webkit-line-clamp: 6; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    height: auto;
+}
+.buttonNext {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    margin-left: 5%;
+    color: #006DBF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.aaa {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-transition: -webkit-transform 1600ms;
+    transition: -webkit-transform 1600ms, transform 1600ms;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.mainDivMobile{
+    padding-bottom: 50px;
+}
+@media screen and (min-width: 815px) {
+    .mainDivMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 815px) {
+    .mainDiv{
+        display: none;
+    }
+}

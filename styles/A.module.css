@@ -1,0 +1,16 @@
+.link {
+    text-decoration: none;
+    margin: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc( (100vw - 480px)/(2300 - 480) * (14 - 8) + 8px);
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #ffffff;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.link:hover {
+    border-bottom: 1.2px solid #56c5ff
+}

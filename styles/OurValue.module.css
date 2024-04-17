@@ -1,0 +1,108 @@
+.totalCardStyle {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-top: 100px;
+    width: calc( (100vw - 768px)/(1900 - 768) * (1084 - 728) + 728px);
+    align-items: start;
+}
+.ourValue {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (35 - 28) + 28px);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #125E97;
+    padding-left: calc( (100vw - 768px)/(1900 - 768) * (420 - 10) + 10px);
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (245 - 125) + 125px);
+}
+.ourValueMobile {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #125E97;
+    padding-left: 5%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.cardStyle {
+    width: calc( (100vw - 768px)/(1900 - 768) * (340 - 225) + 225px);
+    height: calc( (100vw - 768px)/(1900 - 768) * (260 - 175) + 175px);
+    background: rgba(0, 137, 239, 0.05);
+    margin: auto;
+    margin-bottom: 75px;
+
+}
+.cardStyleMobile {
+    width: 95%;
+    height: auto;
+    background: rgba(0, 137, 239, 0.05);
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+
+}
+
+
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (20 - 16) + 16px);
+    line-height: 140%;
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (25 - 10) + 10px);
+    padding-bottom: calc( (100vw - 768px)/(1900 - 768) * (25 - 10) + 10px);
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+.titleMobile {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+.subTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (16 - 12) + 12px);
+    line-height: 155%;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.subTitleMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 10px;
+}
+.mainDiv {
+
+}
+.mainDivMobile {
+
+}
+@media screen and (max-width: 815px) {
+    .mainDiv {
+        display: none;
+    }
+
+}
+@media screen and (min-width: 815px) {
+    .mainDivMobile {
+        display: none;
+    }
+
+}

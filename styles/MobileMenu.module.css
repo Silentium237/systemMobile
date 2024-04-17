@@ -1,0 +1,19 @@
+.mainDiv {
+    display: inherit;
+    background: linear-gradient(to right top, #006DBF, #0092FF);
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    opacity: 0.85;
+}
+
+
+@media screen and (min-width: 815px) {
+    .mainDiv {
+        display: none;
+    }
+}

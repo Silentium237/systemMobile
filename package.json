@@ -1,0 +1,32 @@
+{
+  "name": "next-full",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.3",
+    "@next/font": "^13.4.4",
+    "mobx-react-lite": "^3.4.3",
+    "next": "^13.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-slick": "^0.29.0",
+    "sass": "^1.32.0"
+  },
+  "devDependencies": {
+    "@mui/material": "^5.13.4",
+    "@types/node": "^20.2.1",
+    "@types/react": "^18.2.6",
+    "typescript": "^5.0.4"
+  }
+}

@@ -1,0 +1,114 @@
+.mainFooterStyle {
+    width: 100%;
+    height: 425px;
+    left: 0px;
+    display: flex;
+    position: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+.mainFooterStyleMobile {
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding-left: 5%;
+}
+
+.phoneInfo {
+    padding-top: 160px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+   text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+.phoneInfoMobile {
+    padding-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 20px;
+}
+
+.phoneInfoNumber {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding-top: 15px;
+}
+.linkText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    color: #FFFFFF;
+}
+.linkTextMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 20px;
+}
+.imgStyle {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.spanBlock {
+    padding-right: 132px;
+}
+.direction{
+    padding-top: 60px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.directionMobile{
+    padding-top: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+.copyrightMobile{
+    padding-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 10px;
+}
+.linkEmail {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0089EF;
+}
+
+@media screen and (min-width: 815px) {
+    .mainFooterStyleMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 815px) {
+    .mainFooterStyle{
+        display: none;
+    }
+}

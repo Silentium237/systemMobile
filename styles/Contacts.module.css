@@ -1,0 +1,170 @@
+.cardInfo {
+    box-sizing: border-box;
+    margin: auto;
+    height: 256px;
+    max-width: 1084px;
+    background: rgba(0, 146, 255, 0.03);
+    border: 1px solid rgba(0, 146, 255, 0.3);
+}
+.cardInfoMobile {
+    box-sizing: border-box;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    background: rgba(0, 146, 255, 0.03);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.cardPhoneEmailText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.cardPhoneEmailTextMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 4;
+    /*text-transform: uppercase;*/
+    color: #000000;
+    margin-left: 5%;
+}
+.cardPhoneEmailSubText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: #000000;
+}
+.weAreInSocial {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    /*text-transform: uppercase;*/
+    color: #125E97;
+    margin-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.cardPhoneEmailSubTextMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2;
+    color: #000000;
+    margin-left: 5%;
+}
+.emailLink {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0089EF;
+}
+.backgroundSendForm {
+    width: 100%;
+    height: auto;
+    background: rgba(0, 146, 255, 0.15);
+}
+.sendFormCard {
+    max-width: 928px;
+    height: 556px;
+    background: #FFFFFF;
+    opacity: 0.95;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+    margin: auto;
+    align-items: center;
+
+    display: flex;
+}
+.sendFormCardMobile {
+    max-width: 90%;
+    height: auto;
+    background: #FFFFFF;
+    opacity: 0.95;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+    margin: auto;
+    align-items: center;
+    display: flex;
+}
+
+.subTitleSendFormMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-left: 3%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+.anyQuestionMobile{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33px;
+    color: #125E97;
+    margin-left: 5%;
+    margin-top: -100px;
+    position: absolute;
+}
+
+.mapTextBackground {
+    max-width: 888px;
+    height: 475px;
+    background: rgba(0, 109, 191, 0.5);
+}
+.mapText {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 200px;
+    padding-left: 200px;
+}
+.breadCramsMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding-top: 60px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 5%;
+}
+.titleMobile {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    color: #125E97;
+    margin-left: 5%;
+    padding-bottom: 20px;
+}
+.mainDiv {
+
+}
+.mainDivMobile {
+
+}
+
+@media screen and (min-width: 815px) {
+    .mainDivMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 815px) {
+    .mainDiv{
+        display: none;
+    }
+}

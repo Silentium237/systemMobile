@@ -1,0 +1,25 @@
+.winText {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40vw;
+    line-height: 40vw;
+    text-transform: uppercase;
+    background: linear-gradient(274.38deg, #38AAFF -28.26%, rgba(0, 146, 255, 0) 67.28%), rgba(0, 128, 223, 0.95);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    opacity: 0.03;
+    margin-left: 10%;
+    margin-top: -20%
+    /*text-align: center;*/
+}
+.mainText {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 400px)/(1900 - 400) * (35 - 25) + 25px);
+    line-height: 150%;
+    text-transform: uppercase;
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (120 - 60) + 60px);
+    color: rgba(0, 0, 0, 0.9);
+    padding-bottom: 30px;
+}

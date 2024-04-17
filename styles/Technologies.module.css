@@ -1,0 +1,104 @@
+.mainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: calc( (100vw - 768px)/(1900 - 768) * (1300 - 600) + 600px);
+    padding-top: 250px
+}
+.mainDivMobile {
+
+}
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (35 - 28) + 28px);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #125E97;
+    padding-bottom: calc( (100vw - 768px)/(1900 - 768) * (130 - 100) + 100px);
+}
+.titleMobile {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #125E97;
+    margin-left: 5%;
+    padding-top: 60px;
+}
+.cardText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (20 - 16) + 16px);
+    line-height: 170%;
+    color: #FFFFFF;
+}
+.cardTextMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.subTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (20 - 16) + 16px);
+    line-height: 170%;
+    color: #000000;
+}
+.textForTechnologies {
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (20 - 16) + 16px);
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(0, 137, 239, 0.05);
+    color: #0092FF;
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (30 - 20) + 20px);
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.textForTechnologiesMobiles {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: #0089EF0D;
+    margin: 25px;
+    color: #0092FF;
+    height: 100%;
+    width: 100%;
+    padding-top: 15px;
+}
+.textMobile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    padding: 20px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+@media screen and (min-width: 815px) {
+    .mainDivMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 815px) {
+    .mainDiv{
+        display: none;
+    }
+}

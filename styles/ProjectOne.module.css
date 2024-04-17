@@ -1,0 +1,131 @@
+.mainBlock {
+    width: 1084px;
+    height: 603px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.cardTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: rgba(0, 0, 0, 0.5);
+}
+.cardSubTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: rgba(0, 0, 0, 0.8);
+}
+.li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.8);
+}
+.buttonVideo {
+    width: 355px;
+    height: 70px;
+    background: #125E97;
+}
+.buttonVideoText {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 27px;
+}
+.subCard {
+    box-sizing: border-box;
+    background: rgba(0, 146, 255, 0.03);
+    border: 1px solid rgba(0, 146, 255, 0.3);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 1084px;
+    height: 322px;
+}
+.subCardTitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+    width: 40px;
+    float: left;
+    text-align: left;
+}
+.taskTitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.divDescription {
+    width: 1084px;
+    padding-top: 150px;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.descriptionTitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+    height: 100px;
+    padding-top: 60px;
+}
+.descriptionText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: rgba(0, 0, 0, 0.8);
+    height: 400px;
+}
+.descriptionTextAll {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 1084px;
+    margin: auto;
+}
+.buttonDescription {
+    width: 355px;
+    height: 70px;
+    background: #125E97;
+}
+.buttonDescriptionText {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 25px;
+}

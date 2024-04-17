@@ -1,0 +1,72 @@
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (35 - 28) + 28px);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #125E97;
+    padding-bottom: calc( (100vw - 768px)/(1900 - 768) * (30 - 15) + 15px);
+}
+.titleMobile {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #125E97;
+    padding-top: 25%;
+    padding-left: 5%;
+}
+.subTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc( (100vw - 768px)/(1900 - 768) * (20 - 14) + 14px);
+    line-height: 170%;
+    color: rgba(0, 0, 0, 0.8);
+}
+.subTitleMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.8);
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mainDiv{
+    display: flex;
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (180 - 60) + 60px);
+}
+.subMainDiv{
+    position: absolute;
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (170 - 50) + 50px);
+    left: calc( (100vw - 768px)/(1900 - 768) * (1050 - 400) + 400px);
+}
+.mainDivMobile{
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (180 - 60) + 60px);
+}
+.subMainDivMobile{
+    width: 100%;
+
+}
+.mainTextSellwin {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc( (100vw - 300px)/(1900 - 300) * (300 - 70) + 70px);
+    line-height: 97px;
+    color: #0080DF;
+    opacity: 0.1;
+}
+
+@media screen and (min-width: 815px) {
+    .mainDivMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 815px) {
+    .mainDiv{
+        display: none;
+    }
+}

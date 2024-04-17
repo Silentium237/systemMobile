@@ -1,0 +1,183 @@
+.breadCrams {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    padding-top: 120px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.breadCramsMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding-top: 60px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 5%;
+}
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 150%;
+    text-transform: uppercase;
+    padding-top: 120px;
+    color: #125E97;
+}
+.titleMobile {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    color: #125E97;
+    margin-left: 5%;
+}
+.subTitleMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 20px;
+    color: black;
+    margin-left: 5%;
+}
+
+.cardList {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    maxWidth: 1084px;
+    height: 493px;
+    margin-top: 90px;
+    padding-bottom: 200px;
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+}
+.li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px;
+    color: #000000;
+}
+.liMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+    color: #000000;
+}
+.cardStyle {
+    margin-top: 40px;
+    width: 522px;
+    height: 695px;
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+}
+
+.cardStyleMobile {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+}
+.titleCardText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 40px;
+    color: #000000;
+}
+
+.titleCardTextMobile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.subTitleCardText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 40px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.subTitleCardTextMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 5%;
+    -webkit-line-clamp: 6; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    height: auto;
+}
+.nextButtonStyle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    padding-left: 40px;
+    position: absolute;
+    padding-top: 80px;
+    color: #006DBF;
+}
+.nextButtonStyleMobile {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    padding-left: 40px;
+    padding-top: 80px;
+    color: #006DBF;
+}
+.buttonSeeAll {
+    width: 355px;
+    height: 70px;
+    background: #125E97;
+}
+.buttonSeeAll:hover {
+    background-color: #0089EF
+}
+.textButtonSeeAll {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.mainDiv {
+
+}
+.mainDivMobile {
+
+}
+@media screen and (min-width: 815px) {
+    .mainDivMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 815px) {
+    .mainDiv{
+        display: none;
+    }
+}

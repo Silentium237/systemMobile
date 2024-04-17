@@ -1,0 +1,48 @@
+.cardStyle {
+    background: #FFFFFF;
+    box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.07), 0px 20px 50px rgba(178, 179, 179, 0.07);
+    width: 505px;
+    height: 515px;
+    margin-left: 300px;
+    text-align: center;
+}
+.cardTextFontStyle {
+    background: linear-gradient(0deg, rgba(0, 128, 223, 0.84), rgba(0, 128, 223, 0.84));
+    border-radius: 5px;
+    width: 325px;
+    height: 112px;
+    padding-top: 40px;
+    margin: auto;
+    margin-top: 55px;
+}
+.cardTextTitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+}
+.cardSubTextTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    float: left;
+    margin-left: 70px;
+    text-align: start;
+    width: 350px;
+}
+.about {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #125E97;
+    padding-left: 400px;
+    position: absolute;
+    padding-top: 100px
+}

@@ -1,0 +1,68 @@
+.divStyle {
+    width: 1084px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    margin: auto;
+    padding-top: 50px;
+
+}
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.9);
+}
+.subTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 10px;
+}
+.subTitle:hover {
+    text-decoration: underline;
+    color: #56c5ff;
+    cursor: pointer;
+
+}
+.footerText {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 145%;
+    text-transform: uppercase;
+    color: #0092FF;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    text-align: left;
+    width: 1084px;
+}
+.hr {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 1084px;
+    margin: auto;
+    margin-top: 20px;
+}
+.dropdownContent {
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    align-items: center;
+    opacity: 1;
+    background: #FFFFFF;
+    top: 95px;
+    justify-content: center;
+    margin: auto;
+}
