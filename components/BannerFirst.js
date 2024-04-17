@@ -25,7 +25,7 @@ export default function BannerFirst() {
                 </div>
             </div>
             <div className={styleOfferText.mainDivMobile} >
-                <img src="../ill.png" style={{position: "absolute", left: "21%", width: "calc( (100vw - 768px)/(1900 - 768) * (1000 - 600) + 600px)" }} />
+                <img src="../ill.png" style={{position: "absolute",  width: "100%" }} />
                 <div style={{backgroundImage: "linear-gradient(to bottom right, #c2e8ff, #a8d0ff)",
                     width: "100%",
                     margin: "auto",  }}>

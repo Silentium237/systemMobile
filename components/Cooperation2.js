@@ -104,7 +104,7 @@ export default function Cooperation2({modeliSotrudnichestva}) {
 
                 <div className={styles.titleCoopNextMobile}>Фиксированный проект (Fixed Project)</div>
                 <hr style={{
-                    width: "100%",
+                    width: "90%",
                     backgroundColor: "#1d88d9",
                     color: "#197fc9",
                     border: "none",
@@ -118,7 +118,7 @@ export default function Cooperation2({modeliSotrudnichestva}) {
                        В этой модели заказчик и IT-компания заключают контракт на выполнение конкретного проекта с фиксированными тре..
                     </div>
                     <div style={{backgroundColor: "#125E97",
-                        width: "100%",
+                        width: "90%",
                         height: 70 ,
                         textAlign: "center",
                         paddingTop: 26,
