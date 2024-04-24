@@ -26,7 +26,7 @@ export default function Technologies({tekhnologii}) {
                       </div>
 
                 <div style={{
-                    backgroundImage: "Url(/technologies.svg)",
+                    backgroundImage: "Url(/technologies.png)",
                     backgroundRepeat: "no-repeat",
                     height: "calc( (100vw - 768px)/(1900 - 768) * (700 - 400) + 400px)",
                     width:"calc( (100vw - 768px)/(1900 - 768) * (600 - 400) + 400px)"
@@ -38,7 +38,7 @@ export default function Technologies({tekhnologii}) {
                         padding: "calc( (100vw - 768px)/(1900 - 768) * (60 - 40) + 40px)",
                         marginLeft: 30,
                         paddingTop: "calc( (100vw - 768px)/(1900 - 768) * (150 - 100) + 100px)",
-                    }} className={style.cardTextM}>
+                    }} className={style.cardText}>
                         Sellwin System предоставляет услуги по разработке,
                         внедрению и сопровождению программного обеспечения
                         для дистрибуции, розничной торговли и производства,
@@ -70,7 +70,7 @@ export default function Technologies({tekhnologii}) {
                               width: "calc( (100vw - 768px)/(1900 - 768) * (256 - 170) + 170px)",
                               height: "calc( (100vw - 768px)/(1900 - 768) * (94 - 58) + 58px)",
                               marginRight:10}}>
-                        MS Sharepoint
+                        VUE JS
                     </span>
                         <span className={style.textForTechnologies} style={styleBig}>
                        JavaScript
@@ -86,7 +86,7 @@ export default function Technologies({tekhnologii}) {
                             </div>
                         <div style={{  position: "relative", justifyContent: "space-between", display: "flex"}}>
                           <span className={style.textForTechnologies} style={styleSmall}>
-                      1 С
+                      NEXT JS
                     </span>  <span className={style.textForTechnologies} style={styleSmall}>
                         MS SQL
                     </span>  <span className={style.textForTechnologies} style={styleSmall}>
@@ -94,7 +94,7 @@ export default function Technologies({tekhnologii}) {
                     </span>
                     </div>    <div style={{ position: "relative", justifyContent: "space-between", display: "flex"}}>
                           <span className={style.textForTechnologies} style={styleSmall}>
-                        MS Olap
+                        BI
                     </span>  <span className={style.textForTechnologies} style={styleSmall}>
                         С#
                     </span>  <span className={style.textForTechnologies} style={styleSmall}>
@@ -123,7 +123,7 @@ export default function Technologies({tekhnologii}) {
                         Технологии
                       </div>
                       <div className={style.cardTextMobile}>
-                          В разработках программных продуктов наша компания использует самые последние достижения в области  IТ-технологий:
+                          В разработках программных продуктов наша компания использует самые последние достижения в области IТ-технологий:
                       </div>
                       <div style={{  display: "grid",
                           gridGap: 5,

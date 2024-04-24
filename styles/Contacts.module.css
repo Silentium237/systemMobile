@@ -40,7 +40,7 @@
     line-height: 155%;
     color: #000000;
 }
-.weAreInSocial {
+.weAreInSocialMobile {
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
@@ -50,6 +50,17 @@
     margin-left: 5%;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.weAreInSocial {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 33px;
+    /*text-transform: uppercase;*/
+    color: #125E97;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 70%;
 }
 .cardPhoneEmailSubTextMobile {
     font-style: normal;
@@ -102,6 +113,14 @@
     margin-left: 3%;
     margin-right: 5%;
     margin-top: 20px;
+}
+.subTitleSendForm {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #000000;
+
 }
 
 .anyQuestionMobile{

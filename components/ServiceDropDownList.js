@@ -1,9 +1,6 @@
 import styleDropDown from "../styles/MainContainer.module.css"
 
-
-
 const ServiceDropDownList = ({showMenuService, setShowMenuService,services})=> {
-
 
     return (
         <>

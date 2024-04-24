@@ -151,6 +151,18 @@
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+.seeAll {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Open Sans;
+    color: white;
+    background-color: #125E97;
+    text-align: center;
+    height: 56px;
+    width: 296px;
+    padding-top: 20px;
+    margin: auto;
+}
 
 .mainDivMobile{
     padding-bottom: 50px;

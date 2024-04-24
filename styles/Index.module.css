@@ -108,11 +108,14 @@
 .divForForm {
     position: absolute;
     width: calc( (100vw - 480px)/(1900 - 480) * (1040 - 520) + 520px);
-    height: calc( (100vw - 480px)/(1900 - 480) * (215 - 150) + 150px);
+    height: calc( (100vw - 480px)/(1900 - 480) * (215 - 120) + 120px);
     left: calc( (100vw - 480px)/(1900 - 480) * (435));
-    top:  calc( (100vw - 480px)/(1900 - 480) * (980 - 520) + 520px);
+    top:  calc( (100vw - 480px)/(1900 - 480) * (980 - 300) + 300px);
     background: #FFFFFF;
     box-shadow: 0px -20px 50px rgba(178, 179, 179, 0.1), 0px 20px 50px rgba(178, 179, 179, 0.1);
+}
+.videoStyle{
+   padding-top: 92px;
 }
 
 .inputButton {
@@ -128,7 +131,12 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    background: #0089EF;
+    background: #0092FF;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.inputButton:hover {
+    background: #49aeff;
 }
 
 .inputButtonMobileWriteMe {
@@ -143,6 +151,10 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    background: #0092FF;
+    cursor: pointer;
+}
+.inputButtonMobileWriteMe:hover {
     background: #0089EF;
 }
 .inputButtonMobile {
@@ -204,7 +216,7 @@
     width: calc( (100vw - 768px)/(1900 - 768) * (440 - 300) + 300px);
     height: calc( (100vw - 768px)/(1900 - 768) * (508 - 350) + 350px);
     margin-left: calc( (100vw - 300px)/(1900 - 300) * (40 - 50) + 50px);
-    top: calc( (100vw - 350px)/(1900 - 350) * (1350 - 850) + 850px);
+    top: calc( (100vw - 350px)/(1900 - 350) * (1350 - 750) + 750px);
     z-index: 1;
     background: linear-gradient(134.35deg, rgba(0, 146, 255, 0.5) -46.81%, #0080DF 39.75%);
     opacity: 0.1;
@@ -287,7 +299,7 @@
 .whoWeAreMainDivMobile {
     padding-left: 15px;
     margin: auto;
-    padding-top: calc( (100vw - 300px)/(1900 - 300) * (300 - 50) + 50px);
+    padding-top: calc( (100vw - 300px)/(1900 - 300) * (300 - 10) + 10px);
     width: 95%;
 }
 .divLineInfoFirst {
@@ -315,6 +327,9 @@
     .divLineInfoFirstMobile {
         display: none;
     }
+    .videoStyle {
+        padding-top: 92px;
+    }
 
 }
 @media screen and (max-width: 815px) {
@@ -329,5 +344,8 @@
     }
     .mainDivLineInfoSecond {
         display: none;
+    }
+    .videoStyle{
+        padding-top: 50px;
     }
 }

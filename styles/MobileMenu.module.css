@@ -10,6 +10,24 @@
     width: 100%;
     opacity: 0.85;
 }
+.connectButton {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Open Sans;
+    color: white;
+    background-color: #0089EF;
+    text-align: center;
+    height: 56px;
+    width: 296px;
+    padding-top: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 2;
+    top: 75%;
+}
 
 
 @media screen and (min-width: 815px) {

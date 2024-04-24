@@ -42,37 +42,40 @@ export default function MainImg() {
 
     return (
         <>
-            <div style={{
-                backgroundImage: mainImg,
-                height: "calc( (100vw - 300px)/(1900 - 300) * (1084 - 400) + 400px)", backgroundRepeat: "no-repeat center center fixed",
-                width: "100%", margin: "auto", backgroundSize: "cover", transition: "1s ease-out 0.5s", display: "flex"
-            }}>
-                {/*<div className={style.connectButton}>*/}
-                {/*    СВЯЗАТЬСЯ С НАМИ*/}
-                {/*</div>*/}
-            </div>
-            <div className={style.divMain}>
-                <p className={style.mainText1}>С НАМИ </p>
-                <p className={style.mainText1}
-                   style={{color: colorText, transition: "1s ease-out 0.5s"}}>ВЫИГРЫВАЮТ!</p>
-            </div>
-            <div style={{width: "calc( (100vw - 768px)/(1900 - 768) * (1084 - 768) + 768px)" }}>
-                <span >
-                        <span className={style.numberActive}>
-                            {value} / 3
-                        </span>
-                        {/*<span className={style.numberNotActive}>*/}
-                        {/*     / 3*/}
-                        {/*</span>*/}
-                </span>
+            <video width="100%" height="calc( (100vw - 300px)/(1900 - 300) * (1084 - 400) + 400px)" className={style.videoStyle}  autoPlay muted loop>
+                <source src={`./videoFile.mp4`} type="video/mp4"/>
+            </video>
+            {/*<div style={{*/}
+            {/*    backgroundImage: mainImg,*/}
+            {/*    height: "calc( (100vw - 300px)/(1900 - 300) * (1084 - 400) + 400px)", backgroundRepeat: "no-repeat center center fixed",*/}
+            {/*    width: "100%", margin: "auto", backgroundSize: "cover", transition: "1s ease-out 0.5s", display: "flex"*/}
+            {/*}}>*/}
+            {/*    /!*<div className={style.connectButton}>*!/*/}
+            {/*    /!*    СВЯЗАТЬСЯ С НАМИ*!/*/}
+            {/*    /!*</div>*!/*/}
+            {/*</div>*/}
+            {/*<div className={style.divMain}>*/}
+            {/*    <p className={style.mainText1}>С НАМИ </p>*/}
+            {/*    <p className={style.mainText1}*/}
+            {/*       style={{color: colorText, transition: "1s ease-out 0.5s"}}>ВЫИГРЫВАЮТ!</p>*/}
+            {/*</div>*/}
+            {/*<div style={{width: "calc( (100vw - 768px)/(1900 - 768) * (1084 - 768) + 768px)" }}>*/}
+            {/*    <span >*/}
+            {/*            <span className={style.numberActive}>*/}
+            {/*                {value} / 3*/}
+            {/*            </span>*/}
+            {/*            /!*<span className={style.numberNotActive}>*!/*/}
+            {/*            /!*     / 3*!/*/}
+            {/*            /!*</span>*!/*/}
+            {/*    </span>*/}
 
-                <span >
-                            <button className={style.buttonLeft} onClick={() => changeLeft(value)}>  <img
-                                src="../right.svg"/> </button>
-                            <button className={style.buttonRight} onClick={() => changeRight(value)}>  <img
-                                src="../left.svg"/></button>
-                </span>
-            </div>
+            {/*    <span >*/}
+            {/*                <button className={style.buttonLeft} onClick={() => changeLeft(value)}>  <img*/}
+            {/*                    src="../right.svg"/> </button>*/}
+            {/*                <button className={style.buttonRight} onClick={() => changeRight(value)}>  <img*/}
+            {/*                    src="../left.svg"/></button>*/}
+            {/*    </span>*/}
+            {/*</div>*/}
 
         </>
 

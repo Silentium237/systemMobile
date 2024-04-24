@@ -7,6 +7,7 @@ import styleProject from "../styles/ProjectsAndSolution.module.css"
 import MainImgForAnotherPage from "../components/MainImgForAnotherPage";
 import Cooperation from "../components/Cooperation";
 import Link from "next/link";
+import Cooperation2 from "../components/Cooperation2";
 
 export default function project ({cardText, tekhnologii, modeliSotrudnichestva,services}){
 
@@ -17,8 +18,7 @@ export default function project ({cardText, tekhnologii, modeliSotrudnichestva,s
                 "лиентская база данного web приложения насчитывает более 1000 пользователей, " +
                 "которые являются крупными и средними организациями по реализации бытовой " +
                 "продукции и продуктов питания на территории РБ. Данный сайт " +
-                "позволяет легко и быстро сформировать карзину и оформить заказ благодаря " +
-                "современному подходу к реализации всех задумак...",
+                "позволяет легко и быстро сформировать карзину и оформить заказ ...",
             link: "/projectB2B"
         },
         {   title: "BeautyHouse.by",
@@ -69,7 +69,10 @@ export default function project ({cardText, tekhnologii, modeliSotrudnichestva,s
             <div style={{width: 1084,  alignItems: "center", justifyContent: "center", margin: "auto"}}>
 
                 <div className={style.breadCrams}>
-                    <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
+                    <Link href="/" style={{textDecoration: "none", color: "gray"}}>
+                        <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
+                    </Link>
+
                     <span style={{color: "black"}}>Проекты и решения</span>
                 </div>
                 <div className={style.title}>Проекты и решения</div>
@@ -124,7 +127,7 @@ export default function project ({cardText, tekhnologii, modeliSotrudnichestva,s
 
 
 
-            <Cooperation modeliSotrudnichestva={modeliSotrudnichestva}/>
+            <Cooperation2 modeliSotrudnichestva={modeliSotrudnichestva}/>
             <Partners/>
             <WriteMe/>
 

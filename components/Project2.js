@@ -12,60 +12,55 @@ export default function Project2() {
         {
             title: "BeautyHouse",
             url: "../BH2.png",
+            url1: "../b2b.png",
+            url2: "../pm.png",
             link: "/beautyhouse",
             text: "..."
         },{
             title: "BeautyHouse",
             url: "../b2b.png",
+            url1: "../BH2.png",
+            url2: "../pm.png",
             link: "/beautyhouse",
             text: "..."
         },{
             title: "BeautyHouse",
             url: "../pm.png",
-            link: "/beautyhouse",
-            text: "..."
-        },{
-            title: "BeautyHouse",
-            url: "../shopSellwin.png",
+            url1: "../b2b.png",
+            url2: "../BH2.png",
             link: "/beautyhouse",
             text: "..."
         },
         // {
-        //     title: "Проектная разработка",
-        //     url: "../cooperation2.svg",
-        //     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus orci sit" +
-        //         " tortor imperdiet est eu tortor,perdiet est eu tortor, sagittis. Lorem ipsum perdiet est eu tortor, sagittis. Lorem ipsum perdiet est eu tortor, sagittis. Lorem ipsum  sagittis. Lorem ipsum dolor" +
-        //         " sit amet, consectetur adipiscing elit.",
+        //     title: "BeautyHouse",
+        //     url: "../shopSellwin.png",
+        //     link: "/beautyhouse",
+        //     text: "..."
         // },
-        // {
-        //     title: "Расширение команды",
-        //     url: "../cooperation3.svg",
-        //     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus orci sit" +
-        //         " tortor imperdiet est eu tortor, sagittis. Lorem ipsum dolor" +
-        //         " sit amet, consectetur adipiscing elit.",
-        // }
     ]
 
 
     const [showCardItem, setShowCardItem] = useState(0)
     const [pxLength, setPxLength] = useState(1)
-
-    const changeCardNumber = (item) => {
-        if (item === "right") {
-            if (showCardItem < 2) {
-                setShowCardItem(showCardItem + 1)
-                setPxLength(pxLength + 80)
-            }
-
-        } else if (item === "left") {
-            if (showCardItem > 0) {
-                setShowCardItem(showCardItem - 1)
-                setPxLength(pxLength - 80)
-            }
-
-        }
-
-    }
+    const [cardNumber, setCardNumber] = useState(1)
+    const [leftHover, setLeftHover] = useState(false)
+    const [rightHover, setRightHover] = useState(false)
+    // const changeCardNumber = (item) => {
+    //     if (item === "right") {
+    //         if (showCardItem < 2) {
+    //             setShowCardItem(showCardItem + 1)
+    //             setPxLength(pxLength + 80)
+    //         }
+    //
+    //     } else if (item === "left") {
+    //         if (showCardItem > 0) {
+    //             setShowCardItem(showCardItem - 1)
+    //             setPxLength(pxLength - 80)
+    //         }
+    //
+    //     }
+    //
+    // }
 
 
     return (
@@ -75,9 +70,9 @@ export default function Project2() {
                     Проекты и решения
                 </div>
                 {cardText.map((item, index) => (
-                    <>
-                        {index === showCardItem ?
-                            <div style={{display: "flex",
+                    <div key={index}>
+                        {index === cardNumber ?
+                            <div  style={{display: "flex",
                                 alignItems: "center",
                                 margin: "auto",
                                 width: "calc( (100vw - 768px)/(1900 - 768) * (1078 - 768) + 768px)",
@@ -89,7 +84,7 @@ export default function Project2() {
                                             width: "calc( (100vw - 768px)/(1900 - 768) * (720 - 490) + 490px)",
                                             height: "calc( (100vw - 768px)/(1900 - 768) * (510 - 360) + 360px)",
                                         }}
-                                        src="../bh2.jpg"
+                                        src={item.url}
                                         alt="../bh2.jpg"
                                         loading="lazy"
                                     />
@@ -125,7 +120,7 @@ export default function Project2() {
                                             width: "calc( (100vw - 768px)/(1900 - 768) * (380 - 240) + 240px)",
                                             height: "calc( (100vw - 768px)/(1900 - 768) * (270 - 180) + 180px)",
                                         }}
-                                             src="../bh1.jpg"/>
+                                             src={item.url1}/>
                                     </div>
                                     <div>
                                         <img style={{
@@ -134,21 +129,30 @@ export default function Project2() {
                                             width: "calc( (100vw - 768px)/(1900 - 768) * (380 - 240) + 240px)",
                                             height: "calc( (100vw - 768px)/(1900 - 768) * (270 - 180) + 180px)",
                                         }}
-                                             src="../bh3.jpg"/>
+                                             src={item.url2}/>
                                     </div>
                                 </div>
                             </div>
                             : null
                         }
-                    </>
+                    </div>
                 ))}
 
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", maxWidth: 1150, paddingTop: 35, marginLeft: -70}}>
-                    <button style={{width: 75, height: 75, marginRight: 15, backgroundColor: "white", border: "1px solid black"}}
-                            onClick={() => changeCardNumber("left")}>  <img
-                        src="../right.svg"/> </button>
-                    <button style={{width: 75, height: 75, backgroundColor: "white", border: "1px solid black"}} onClick={() => changeCardNumber("right")}>  <img
-                        src="../left.svg"/></button>
+                <div style={{ marginTop: 65 , marginLeft: "21.5vw" }}>
+                    <img onClick={() => {if (cardNumber > 0){setCardNumber(cardNumber - 1)}}}
+                         src={leftHover ? "../buttonRightHover.png" : (cardNumber === 0 ? "../buttonLeftNonActive.png" : "../buttonRightActive.png")  }
+                         onMouseEnter={()=>setLeftHover(true)}
+                         onMouseLeave={()=>setLeftHover(false)}
+                         style={leftHover ? {cursor: "pointer", marginRight: 13,transform: "scale(-1, 1)"} : (cardNumber === 0 ? {cursor: "pointer", marginRight: 13} : {cursor: "pointer", transform: "scale(-1, 1)", marginRight: 13})}
+                    />
+
+                    <img
+                        onClick={() =>{if (cardNumber < 2) {setCardNumber(cardNumber + 1)}}}
+                        onMouseEnter={()=>setRightHover(true)}
+                        onMouseLeave={()=>setRightHover(false)}
+                        src={rightHover ? "../buttonRightHover.png" : (cardNumber === 2 ? "../buttonLeftNonActive.png" : "../buttonRightActive.png")  }
+                        style={rightHover ? {cursor: "pointer", marginRight: 13} : (cardNumber === 2 ? {cursor: "pointer", transform: "scale(-1, 1)"} : {cursor: "pointer"})}
+                    />
                 </div>
             </div>
             <div className={styles.mainDivMobile}>
@@ -156,9 +160,9 @@ export default function Project2() {
                     Проекты и решения
                 </div>
                 {cardText.map((item, index) => (
-                    <>
-                        {index === showCardItem ?
-                            <div style={{display: "flex",
+                    <div key={index}>
+                        {index === cardNumber ?
+                            <div  style={{display: "flex",
                                 alignItems: "center",
                                 margin: "auto",
                                 width: "92%",
@@ -172,14 +176,14 @@ export default function Project2() {
                                             width: "100%",
                                             height: "calc( (100vw - 768px)/(1900 - 768) * (510 - 340) + 340px)",
                                         }}
-                                        src="../bh2.jpg"
+                                        src={item.url}
                                         alt="../bh2.jpg"
                                         loading="lazy"
                                     />
 
                                     <ImageListItemBar
                                         className={styles.textButtonStyle}
-                                        onClick={()=> alert("3333")}
+                                        onClick={()=> console.log("3333")}
                                         title="ПОДРОБНЕЕ"
                                         actionIcon={
                                             <>
@@ -199,36 +203,49 @@ export default function Project2() {
                                         }
                                     />
                                 </ImageListItem>
+
+
                             </div>
                             : null
                         }
-                    </>
+                    </div>
                 ))}
 
-                <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", margin: "auto", paddingLeft: "3%"}}>
+                <div style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    margin: "auto",
+                    paddingLeft: "3%"
+                }}>
                     <div>
                         <img style={{
                             padding: 10,
                             width: "100%",
                         }}
-                             src="../bh1.jpg"/>
+                             src={cardText[cardNumber].url1}/>
                     </div>
                     <div>
                         <img style={{
                             padding: 10,
                             width: "100%",
                         }}
-                             src="../bh3.jpg"/>
+                             src={cardText[cardNumber].url2}/>
                     </div>
                 </div>
                 <div style={{paddingLeft: "5%", paddingBottom: 40 }}>
-                    <button style={{width: 45, height: 45, marginRight: 15, backgroundColor: "white", border: "1px solid black"}}
-                            onClick={() => changeCardNumber("left")}>
-                        <img src="../right.svg" style={{width: 8 , height: 15}} />
-                    </button>
-                    <button style={{width: 45, height: 45, backgroundColor: "white", border: "1px solid black"}} onClick={() => changeCardNumber("right")}>
-                        <img src="../left.svg" style={{width: 8 , height: 15}} />
-                    </button>
+                    <img onClick={() => {if (cardNumber > 0){setCardNumber(cardNumber - 1)}}}
+                         src={cardNumber === 0 ? "../buttonLeftNonActive.png" : "../buttonRightActive.png"  }
+                         width={45}
+                         style={cardNumber === 0 ? {cursor: "pointer", marginRight: 13} : {cursor: "pointer", transform: "scale(-1, 1)", marginRight: 13}}
+                    />
+
+                    <img
+                        onClick={() =>{if (cardNumber < 2) {setCardNumber(cardNumber + 1)}}}
+                        width={45}
+                        src={rightHover ? "../buttonRightHover.png" : (cardNumber === 2 ? "../buttonLeftNonActive.png" : "../buttonRightActive.png")  }
+                        style={rightHover ? {cursor: "pointer", marginRight: 13} : (cardNumber === 2 ? {cursor: "pointer", transform: "scale(-1, 1)"} : {cursor: "pointer"})}
+                    />
                 </div>
             </div>
 

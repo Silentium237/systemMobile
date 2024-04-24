@@ -1,36 +1,22 @@
 import styles from '../styles/Cooperation.module.css'
 import {useState} from "react";
+import Link from "next/link";
 // import style from "../styles/Index.module.css";
 
 
 export default function Cooperation2({modeliSotrudnichestva}) {
 
-    let cardText = [
-        {
-            title: "Выделенная команда",
-            url: "../cooperationFirstImg.png",
-            text: "За каждым действующим проектом закреплена своя собственная команда, " +
-                "что позволяет максимально покрузится в детали проекта и бизнес логику," +
-                " проработать все скрытые моменты и избежать каких-либо нюансов при запуске.  ",
-        },
-        {
-            title: "Проектная разработка",
-            url: "../cooperationSecondImg.png",
-            text: "Широй кругозор и огромная база знаний позволят создать для Вас" +
-                " уникальный продукт, благодаря которому вы сможете воплотить все свои мечты в реальность",
-        },
-        {
-            title: "Расширение команды",
-            url: "../cooperationThirdImg.png",
-            text: "Благодаря грамотному тайм менеджменту и наличию резервов, " +
-                "скорость реализации проекта будет оставаться стабильной на протяжении всего времени реализации.",
-        }
-    ]
+
 
 
     const [showCardItem, setShowCardItem] = useState(0)
     const [pxLength, setPxLength] = useState(1)
     const [showDetail, setShowDetail] = useState(false)
+    const [cardNumber, setCardNumber] = useState(1)
+    const [leftHover, setLeftHover] = useState(false)
+    const [rightHover, setRightHover] = useState(false)
+    const [shotText, setShotText] = useState(true)
+
 
     const changeCardNumber = (item) => {
         if (item === "right") {
@@ -53,102 +39,89 @@ export default function Cooperation2({modeliSotrudnichestva}) {
                 <div className={styles.cooperation}>
                     Модель Сотрудничества
                 </div>
-                <div className={styles.titleCoopNext}>Фиксированный проект (Fixed Project)</div>
-                <hr style={{width: "50%", backgroundColor: "#1d88d9", color: "#197fc9", border: "none", height: 1, marginTop: 22 }}/>
-                <div style={{width: 1074, display: "flex", alignItems: "center", justifyContent: "space-between", margin: "auto"}}>
-                <span style={{width: 522}} >
-                    <div className={styles.subTitleCoopNext}>Заказчик определяет свои потребности и ожидания,
-                        а IT-компания разрабатывает и доставляет продук или услугу в соответствии с заданными параметрами. </div>
-                    <br/>
-                    <div className={styles.subTitleCoopNext}>Заказчик определяет свои потребности и ожидания,
-                        а IT-компания разрабатывает и доставляет продук или услугу в соответствии с заданными параметрами. </div>
-                    <br/>
-                    <div className={styles.subTitleCoopNext} >Заказчик определяет свои потребности и ожидания,
-                        а IT-компания разрабатывает и доставляет продук или услугу в соответствии с заданными параметрами. </div>
-                    <br/>
+                {modeliSotrudnichestva && modeliSotrudnichestva.data && modeliSotrudnichestva.data.length ? modeliSotrudnichestva.data.map((item, index)=>(
+                    <div  key={index}>
+                        {index === cardNumber ? <div  key={index}>
+                            <div className={styles.titleCoopNext}>{item.name}</div>
+                            <hr style={{width: "50%", backgroundColor: "#1d88d9", color: "#197fc9", border: "none", height: 1, marginTop: 22 }}/>
+                            <div style={{maxWidth: 1074, display: "flex", alignItems: "center", justifyContent: "space-between", margin: "auto", }}>
+                                <div style={{maxWidth: 522, display: "flex",
+                                    flexDirection: "column",
+                                    justifyContent: "space-between",
+                                    height: 410}} >
+                                    <div className={styles.subTitleCoopNext} style={{lineHeight: "33px", }}>
+                                        {item.preview_text}
+                                    </div>
+                                    <Link href="/contact" style={{textDecoration: "none"}}>
+                                        <div className={styles.cooperationButton} >
+                                            НАЧАТЬ СОТРУДНИЧЕСТВО
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div>
+                                    <img src={item.preview_img}  width="100%"/>
+                                </div>
+                            </div>
+                        </div> : null
+                    }
+                    </div>
+                )):null}
 
-                    <div style={{backgroundColor: "#125E97",
-                        width: 355,
-                        height: 70 ,
-                        textAlign: "center",
-                        paddingTop: 26,
-                        color: "white",
-                        fontWeight:600,
-                        fontSize: 16,
-                        position: "absolute"
-                    }}>НАЧАТЬ СОТРУДНИЧЕСТВО</div>
-                </span>
-                    <span>
-                    <img src="../serviceImg1.png" width="502px" height="423px"/>
-                </span>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", maxWidth: 1150, paddingTop: 65, marginLeft: -75}}>
-                    <button style={{width: 75, height: 75, marginRight: 15, backgroundColor: "white", border: "1px solid black"}}
-                            onClick={() => changeCardNumber("left")}>  <img
-                        src="../right.svg"/> </button>
-                    <button style={{width: 75, height: 75, backgroundColor: "white", border: "1px solid black"}} onClick={() => changeCardNumber("right")}>  <img
-                        src="../left.svg"/></button>
+                <div style={{ marginTop: 65 , marginLeft: "21.5vw" }}>
+                        <img onClick={() => {if (cardNumber > 0){setCardNumber(cardNumber - 1)}}}
+                             src={leftHover ? "../buttonRightHover.png" : (cardNumber === 0 ? "../buttonLeftNonActive.png" : "../buttonRightActive.png")  }
+                             onMouseEnter={()=>setLeftHover(true)}
+                             onMouseLeave={()=>setLeftHover(false)}
+                             style={leftHover ? {cursor: "pointer", marginRight: 13,transform: "scale(-1, 1)"} : (cardNumber === 0 ? {cursor: "pointer", marginRight: 13} : {cursor: "pointer", transform: "scale(-1, 1)", marginRight: 13})}
+                        />
+
+                            <img
+                                onClick={() =>{if (cardNumber < 2) {setCardNumber(cardNumber + 1)}}}
+                                 onMouseEnter={()=>setRightHover(true)}
+                                 onMouseLeave={()=>setRightHover(false)}
+                                 src={rightHover ? "../buttonRightHover.png" : (cardNumber === 2 ? "../buttonLeftNonActive.png" : "../buttonRightActive.png")  }
+                                 style={rightHover ? {cursor: "pointer", marginRight: 13} : (cardNumber === 2 ? {cursor: "pointer", transform: "scale(-1, 1)"} : {cursor: "pointer"})}
+                            />
                 </div>
             </div>
 
-
-
             <div className={styles.mainDivCooperationMobile}>
-
                 <div className={styles.cooperationMobile}>
                     Модель Сотрудничества
                 </div>
-                <div style={{padding: "5%"}}>
-                    <img src="../serviceImg1.png" width="100%" />
-                </div>
+                {modeliSotrudnichestva && modeliSotrudnichestva.data && modeliSotrudnichestva.data.length ? modeliSotrudnichestva.data.map((item, index)=>(
+                    <div key={index}>
+                    {index === cardNumber ?
+                        <>
+                            <div  style={{padding: "5%", backgroundImage: `URL(${item.preview_img})`, height: 246, margin: "5%"}}>
 
-                <div className={styles.titleCoopNextMobile}>Фиксированный проект (Fixed Project)</div>
-                <hr style={{
-                    width: "90%",
-                    backgroundColor: "#1d88d9",
-                    color: "#197fc9",
-                    border: "none",
-                    height: 1,
-                    marginTop: 10,
-                    marginLeft: "5%",
-                    marginRight: "5%",
-                    marginBottom: 10
-                }}/>
-                    <div className={styles.subTitleCoopNextMobile}>
-                       В этой модели заказчик и IT-компания заключают контракт на выполнение конкретного проекта с фиксированными тре..
+                            </div>
+                            <div className={styles.titleCoopNextMobile}>Фиксированный проект (Fixed Project)</div>
+                            <hr className={styles.hrStyle} />
+                            <div className={shotText ? styles.subTitleCoopNextMobileShot : styles.subTitleCoopNextMobileAll }>
+                                {item.preview_text}
+                            </div>
+                            <div className={styles.readAllText }
+                            onClick={()=>setShotText(!shotText)}>{shotText ? "ЧИТАТЬ ПОЛНОСТЬЮ" : "СВЕРНУТЬ" }</div>
+                        </>
+                        : null}
                     </div>
-                    <div style={{backgroundColor: "#125E97",
-                        width: "90%",
-                        height: 70 ,
-                        textAlign: "center",
-                        paddingTop: 26,
-                        color: "white",
-                        fontWeight:600,
-                        fontSize: 16,
-                        position: "absolute",
-                        marginLeft: "5%",
-                        marginRight: "5%"
-                    }}>ЧИТАТЬ ПОЛНОСТЬЮ</div>
-
-                {/*<div style={{paddingLeft: "5%", paddingBottom: 20 }}>*/}
-                {/*    <button style={{width: 45, height: 45, marginRight: 15, backgroundColor: "white", border: "1px solid black"}}*/}
-                {/*            onClick={() => changeCardNumber("left")}>*/}
-                {/*        <img src="../right.svg" style={{width: 8 , height: 15}} />*/}
-                {/*    </button>*/}
-                {/*    <button style={{width: 45, height: 45, backgroundColor: "white", border: "1px solid black"}} onClick={() => changeCardNumber("right")}>*/}
-                {/*        <img src="../left.svg" style={{width: 8 , height: 15}} />*/}
-                {/*    </button>*/}
-                {/*</div>*/}
+                )): null}
 
                 <div style={{ paddingLeft: "5%", paddingBottom: 20, paddingTop: 100}}>
-                    <button style={{width: 45, height: 45, marginRight: 15, backgroundColor: "white", border: "1px solid black"}}
-                            onClick={() => changeCardNumber("left")}>
-                        <img src="../right.svg" style={{width: 8 , height: 15}}/> </button>
-                    <button style={{width: 45, height: 45, backgroundColor: "white", border: "1px solid black"}} onClick={() => changeCardNumber("right")}>
-                        <img src="../left.svg" style={{width: 8 , height: 15}}/></button>
+                    <img onClick={() => {if (cardNumber > 0){setCardNumber(cardNumber - 1)}}}
+                         src={cardNumber === 0 ? "../buttonLeftNonActive.png" : "../buttonRightActive.png"  }
+                         width={45}
+                         style={cardNumber === 0 ? {cursor: "pointer", marginRight: 13} : {cursor: "pointer", transform: "scale(-1, 1)", marginRight: 13}}
+                    />
+                    <img
+                        onClick={() =>{if (cardNumber < 2) {setCardNumber(cardNumber + 1)}}}
+                        width={45}
+                        src={rightHover ? "../buttonRightHover.png" : (cardNumber === 2 ? "../buttonLeftNonActive.png" : "../buttonRightActive.png")  }
+                        style={rightHover ? {cursor: "pointer", marginRight: 13} : (cardNumber === 2 ? {cursor: "pointer", transform: "scale(-1, 1)"} : {cursor: "pointer"})}
+                    />
                 </div>
             </div>
-
         </>
 
     )

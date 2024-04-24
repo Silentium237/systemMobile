@@ -20,11 +20,11 @@ export default function TechnoDropDownList({showMenu, setShowMenu, tekhnologii})
                          <div >
                              <ul style={{listStyleType: "none"}}>
                                  {tekhnologii.data.map((item, index) =>(
-                                     <>
+                                     <div key={index}>
                                          {item.group === "FRONTEND"  ?   <li className={styleDropDown.subTitle} key={index}>
                                              <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
                                          </li> : null}
-                                     </>
+                                     </div>
                                  ))}
                              </ul>
                          </div>
@@ -37,11 +37,11 @@ export default function TechnoDropDownList({showMenu, setShowMenu, tekhnologii})
                          <div >
                              <ul style={{listStyleType: "none"}}>
                                   {tekhnologii.data.map((item, index) =>(
-                                      <>
+                                      <div key={index}>
                                           {item.group === "BACKEND" ? <li className={styleDropDown.subTitle} key={index}>
                                               <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
                                           </li> : null}
-                                      </>
+                                      </div>
                                   ))}
                              </ul>
                          </div>
@@ -55,33 +55,33 @@ export default function TechnoDropDownList({showMenu, setShowMenu, tekhnologii})
                              <ul style={{listStyleType: "none"}}>
 
                                   {tekhnologii.data.map((item, index) =>(
-                                      <>
+                                      <div key={index}>
                                           {item.group === "МОБИЛЬНАЯ РАЗРАБОТКА" ? <li className={styleDropDown.subTitle} key={index}>
                                               <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
                                           </li> : null}
-                                      </>
+                                      </div>
                                   ))}
                              </ul>
                          </div>
                     </span>
-                    <span style={{ height: 400}}>
-                            <div className={styleDropDown.title}>
-                               1С РАЗРАБОТКА
-                            </div>
-                                <hr style={{marginTop: 25, marginBottom: 30}}/>
-                         <div >
-                             <ul style={{listStyleType: "none"}}>
+                    {/*<span style={{ height: 400}}>*/}
+                    {/*        <div className={styleDropDown.title}>*/}
+                    {/*           1С РАЗРАБОТКА*/}
+                    {/*        </div>*/}
+                    {/*            <hr style={{marginTop: 25, marginBottom: 30}}/>*/}
+                    {/*     <div >*/}
+                    {/*         <ul style={{listStyleType: "none"}}>*/}
 
-                                  {tekhnologii.data.map((item, index) =>(
-                                      <>
-                                          {item.group === "1С РАЗРАБОТКА" ? <li className={styleDropDown.subTitle} key={index}>
-                                              <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
-                                          </li> : null}
-                                      </>
-                                  ))}
-                             </ul>
-                         </div>
-                    </span>
+                    {/*              {tekhnologii.data.map((item, index) =>(*/}
+                    {/*                  <>*/}
+                    {/*                      {item.group === "1С РАЗРАБОТКА" ? <li className={styleDropDown.subTitle} key={index}>*/}
+                    {/*                          <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}*/}
+                    {/*                      </li> : null}*/}
+                    {/*                  </>*/}
+                    {/*              ))}*/}
+                    {/*         </ul>*/}
+                    {/*     </div>*/}
+                    {/*</span>*/}
                 </div>
                 <hr className={styleDropDown.hr}/>
                 <div className={styleDropDown.footerText}>

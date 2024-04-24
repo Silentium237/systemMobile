@@ -30,8 +30,8 @@ export default function Partners() {
                 <div className={styles.mainText} >
                     Нани партнеры
                 </div>
-                {imgList.map(item =>(
-                    <span style={{ margin: 40,}}>
+                {imgList.map((item,index) =>(
+                    <span key={index} style={{ margin: 40,}}>
                         <img src={item.url} style={{padding: 10}}/>
                 </span>
                 ))}

@@ -1,5 +1,6 @@
 import style from "../styles/Index.module.css"
 import styleOfferText from "../styles/Offer.module.css";
+import Link from "next/link";
 
 export default function BannerFirst() {
     return (
@@ -14,9 +15,11 @@ export default function BannerFirst() {
                     </div>
                     <div style={{display: "flex", justifyContent: "space-between"}}>
                             <span style={{zIndex: 777, paddingLeft:  "calc( (100vw - 768px)/(1900 - 768) * (80 - 20) + 20px)", paddingTop: "calc( (100vw - 768px)/(1900 - 768) * (165 - 20) + 20px)"}}>
-                                 <button className={style.inputButton} style={{width: "calc( (100vw - 768px)/(1900 - 768) * (270 - 200) + 200px)"}}>
+                                 <Link href={"/contact"} style={{textDecoration: "none", color: "white"}}>
+                                <button className={style.inputButton} style={{width: "calc( (100vw - 768px)/(1900 - 768) * (270 - 200) + 200px)"}}>
                                     Написать нам
                                 </button>
+                                 </Link>
                             </span>
                         <span style={{zIndex: 777, paddingRight: 35, paddingTop: 5}}>
                                  <img src="../ill_2.svg" style={{width: "calc( (100vw - 768px)/(1900 - 768) * (200 - 100) + 100px)"}} />
@@ -29,7 +32,6 @@ export default function BannerFirst() {
                 <div style={{backgroundImage: "linear-gradient(to bottom right, #c2e8ff, #a8d0ff)",
                     width: "100%",
                     margin: "auto",  }}>
-
                     <div className={styleOfferText.mainTextOfferMobile} >
                         <div style={{zIndex: 777, float: "right", marginTop: -60}}>
                             <img src="../ill_2.svg" style={{width: "calc( (100vw - 300px)/(1900 - 300) * (200 - 80) + 80px)"}} />
@@ -37,18 +39,13 @@ export default function BannerFirst() {
                         <div style={{paddingBottom: 20}}>
                             Свяжитесь с нами сейчас и получите <span style={{color: "white"}}>бесплатную</span>  консультацию!
                         </div>
-
+                        <Link href={"/contact"} style={{textDecoration: "none", color: "white"}}>
                         <button  className={style.inputButtonMobile} >
                             Написать нам
                         </button>
-
+                        </Link>
                     </div>
-
-
-
-
                 </div>
-
             </div>
         </>
 

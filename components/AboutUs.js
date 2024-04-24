@@ -1,7 +1,5 @@
 import styles from '../styles/AboutUs.module.css'
 import {useState} from "react";
-// import style from "../styles/Index.module.css";
-
 
 export default function AboutUs() {
 
@@ -62,12 +60,13 @@ export default function AboutUs() {
                     height: 80,
                     position: "absolute",
                     marginTop: pxLength
-                }}></p>
-
+                }}>
+                </p>
            <p style={{
                borderLeft: "8px solid rgba(178, 179, 179, 0.5)",
                height: 240
-           }}></p>
+           }}>
+           </p>
            <p style={{paddingTop: 150}}>
                             <button style={{width: 50, height: 50, marginRight: 15}} onClick={()=>changeCardNumber("left")}>  <img
                                 src="../right.svg"/> </button>
@@ -76,7 +75,7 @@ export default function AboutUs() {
            </span>
 
                 {cardText.map((item, index) => (
-                    <>
+                    <div key={index}>
                         {index === showCardItem ?
                             <span className={styles.cardStyle} key={index}>
                <div className={styles.cardTextFontStyle}>
@@ -99,15 +98,8 @@ export default function AboutUs() {
                </span>
                             : null
                         }
-                    </>
-
-
+                    </div>
                 ))}
-
-
-                {/*<img src="../line63.png"/>*/}
-
-
             </div>
         </>
 

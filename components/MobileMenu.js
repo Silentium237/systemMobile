@@ -26,9 +26,6 @@ export default function MobileMenu({services, tekhnologii}) {
         // setOpenTechnologies(!openTechnologies)
     }
 
-    console.log("66666666666666666666")
-    console.log(tekhnologii)
-    console.log(services)
 
     const items = [
         {title: "FRONTEND"},
@@ -125,21 +122,21 @@ export default function MobileMenu({services, tekhnologii}) {
                             </div>
                         ) )}
                     </> : null}
-                    {openService === "УСЛУГИ" ? <>
-                        {services && services.data && services.data.length ? services.data.map((item, index)=> (
-                            <>
-                                {item.group !== "1С РАЗРАБОТКА" ?
+                    {/*{openService === "УСЛУГИ" ? <>*/}
+                    {/*    {services && services.data && services.data.length ? services.data.map((item, index)=> (*/}
+                    {/*        <>*/}
+                    {/*            {item.group !== "1С РАЗРАБОТКА" ?*/}
 
-                                    <div style={{padding:20, paddingBottom: 35, opacity: 0.7}}>
-                                    <span style={{fontSize: 16, fontWeight: 500, fontFamily: "Montserrat",  float: "left", color:"white"}}>
-                                        <Image src="/ellipse.png" alt="ellipse png" style={{marginRight: 10}} width={11} height={11}/>  {item.name}
-                                    </span>
-                                    </div>: null
+                    {/*                <div style={{padding:20, paddingBottom: 35, opacity: 0.7}}>*/}
+                    {/*                <span style={{fontSize: 16, fontWeight: 500, fontFamily: "Montserrat",  float: "left", color:"white"}}>*/}
+                    {/*                    <Image src="/ellipse.png" alt="ellipse png" style={{marginRight: 10}} width={11} height={11}/>  {item.name}*/}
+                    {/*                </span>*/}
+                    {/*                </div>: null*/}
 
-                                }
-                            </>
-                        ) ) : null}
-                    </> : null}
+                    {/*            }*/}
+                    {/*        </>*/}
+                    {/*    ) ) : null}*/}
+                    {/*</> : null}*/}
 
                 </div>
 
@@ -185,28 +182,11 @@ export default function MobileMenu({services, tekhnologii}) {
             </> : null
              }
                 <div>
-                    {openMenu ?   <div style={{fontSize: 16,
-                        fontWeight: 600,
-                        fontFamily: "Open Sans",
-                        color: "white",
-                        backgroundColor: "#0089EF",
-                        textAlign: "center",
-                        height: 56,
-                        width: 296,
-                        paddingTop: 20,
-                        position: "absolute",
-                        margin: "auto",
-                        left: 0,
-                        right: 0,
-                        zIndex: 3,
-                        opacity: 2,
-                        top: "75%"
-                    }}>
-                        СВЯЗАТЬСЯ С НАМИ
-                    </div> :  null
-                    //     <div className={styleForButton.connectButton}>
-                    //     СВЯЗАТЬСЯ С НАМИ
-                    // </div>
+                    {openMenu ?   <Link href={"/contact"}>
+                        <div className={styles.connectButton} >
+                            СВЯЗАТЬСЯ С НАМИ
+                        </div>
+                    </Link>:  null
                     }
                 </div>
 

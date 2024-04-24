@@ -40,9 +40,9 @@ const cardText = [
     } ,
     {
         id: 6,
-        title: "Лидерство",
-        text: "Всегда стремимся занимать лидирующую позицию в своей отрасли",
-        url: "../lider.svg",
+        title: "Общение",
+        text: "Мы всегда стримимся к общению для лучшего понимания всей ситуации",
+        url: "../partner.svg",
         show: false
     }
 ]
@@ -54,12 +54,9 @@ const OurValue = ({}) => {
 
     function changeShowIndex (index) {
         let a = showObj
-        console.log(index)
         for (let i = 0; i< a.length; i++){
             if (index === i){
-                a[i].show = true
-            }else {
-                a[i].show = false
+                a[i].show = !a[i].show
             }
         }
         setShowObj(a)
@@ -73,7 +70,7 @@ const OurValue = ({}) => {
                 </div>
                 <div className={styleOurValue.totalCardStyle}>
                     {cardText.map((item,index) => (
-                        <div key={index} style={index === 5 ? {opacity: 0} : null} className={styleOurValue.cardStyle}>
+                        <div key={index} className={styleOurValue.cardStyle}>
                             <img style={{marginTop: -30, marginLeft: 33}} src={item.url}/>
                             <div style={{width: "calc( (100vw - 768px)/(1900 - 768) * (300 - 200) + 200px)", marginLeft:12, }}>
                                 <div className={styleOurValue.title}>
@@ -85,6 +82,17 @@ const OurValue = ({}) => {
                             </div>
                         </div>
                     ))}
+                    {/*<div  className={styleOurValue.cardStyle}>*/}
+                    {/*    <img style={{marginTop: -30, marginLeft: 33}} src={cardText[0].url}/>*/}
+                    {/*    <div style={{width: "calc( (100vw - 768px)/(1900 - 768) * (300 - 200) + 200px)", marginLeft:12, }}>*/}
+                    {/*        <div className={styleOurValue.title}>*/}
+                    {/*            Общение*/}
+                    {/*        </div>*/}
+                    {/*        <div className={styleOurValue.subTitle} >*/}
+                    {/*            Мы всегда стримимся к общению для лучшего понимания ситуации*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
             </div>
             <div className={styleOurValue.mainDivMobile}>
@@ -97,7 +105,7 @@ const OurValue = ({}) => {
                             <img style={{marginTop: -30, marginLeft: 33}} src={item.url}/>
                             <div style={{width: "90%", marginLeft:12, }}>
                                 <div className={styleOurValue.titleMobile}>
-                                    {item.title} <span style={{float: "right"}}><img src="../downImg.png" /></span>
+                                    {item.title} <span style={{float: "right"}}><img src="../downImg.png" style={item.show ? {transform: "scale(1, -1)"}:{}} /></span>
                                 </div>
                                     <div className={styleOurValue.subTitleMobile} >
                                         {item.show ? item.text : ""}

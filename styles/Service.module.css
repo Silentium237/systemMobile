@@ -115,6 +115,12 @@
     line-height: 150%;
     padding-left: 40px;
     color: rgba(0, 0, 0, 0.8);
+    -webkit-line-clamp: 5; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    height: auto;
+    margin-right: 10px;
 }
 .subTitleCardTextMobile {
     font-style: normal;
@@ -138,6 +144,7 @@
     position: absolute;
     padding-top: 80px;
     color: #006DBF;
+    cursor: pointer;
 }
 .nextButtonStyleMobile {
     font-style: normal;
@@ -164,6 +171,34 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+.seeAll {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Open Sans;
+    color: white;
+    background-color: #125E97;
+    text-align: center;
+    height: 70px;
+    width: 355px;
+    padding-top: 28px;
+    margin: auto;
+}
+.seeAll:hover {
+    background-color: #407DAA;
+}
+
+.seeAllMobile {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Open Sans;
+    color: white;
+    background-color: #125E97;
+    text-align: center;
+    height: 56px;
+    width: 296px;
+    padding-top: 20px;
+    margin: auto;
 }
 .mainDiv {
 
