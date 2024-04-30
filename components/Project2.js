@@ -3,6 +3,7 @@ import {useState} from "react";
 import {ImageListItem, ImageListItemBar} from "@mui/material";
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
+import Link from "next/link";
 // import style from "../styles/Index.module.css";
 
 
@@ -10,25 +11,25 @@ export default function Project2() {
 
     let cardText = [
         {
-            title: "BeautyHouse",
-            url: "../BH2.png",
-            url1: "../b2b.png",
-            url2: "../pm.png",
-            link: "/beautyhouse",
+            title: "B2B",
+            url: "../B2B.png",
+            url1: "../1.png",
+            url2: "../6.png",
+            link: "/projectB2B",
             text: "..."
         },{
-            title: "BeautyHouse",
-            url: "../b2b.png",
-            url1: "../BH2.png",
-            url2: "../pm.png",
-            link: "/beautyhouse",
+            title: "MMM",
+            url: "../1.png",
+            url1: "../B2B.png",
+            url2: "../6.png",
+            link: "/projectMMM",
             text: "..."
         },{
-            title: "BeautyHouse",
-            url: "../pm.png",
-            url1: "../b2b.png",
-            url2: "../BH2.png",
-            link: "/beautyhouse",
+            title: "Evesell",
+            url: "../6.png",
+            url1: "../B2B.png",
+            url2: "../1.png",
+            link: "/projectEvesell",
             text: "..."
         },
         // {
@@ -79,38 +80,42 @@ export default function Project2() {
                                 paddingTop: 50,
                             }}>
                                 <ImageListItem >
-                                    <img
-                                        style={{
-                                            width: "calc( (100vw - 768px)/(1900 - 768) * (720 - 490) + 490px)",
-                                            height: "calc( (100vw - 768px)/(1900 - 768) * (510 - 360) + 360px)",
-                                        }}
-                                        src={item.url}
-                                        alt="../bh2.jpg"
-                                        loading="lazy"
-                                    />
+                                    <div style={{width: "calc( (100vw - 768px)/(1900 - 768) * (720 - 490) + 490px)", display: "flex", alignItems: "center", margin: "auto", justifyContent: "center"}}>
+                                        <img
+                                            style={{
+                                                maxWidth: "calc( (100vw - 768px)/(1900 - 768) * (720 - 490) + 490px)",
+                                                maxHeight: "calc( (100vw - 768px)/(1900 - 768) * (510 - 360) + 360px)",
+                                            }}
+                                            src={item.url}
+                                            alt="../bh2.jpg"
+                                            loading="lazy"
+                                        />
+                                    </div>
 
-                                    <ImageListItemBar
-                                        className={styles.textButtonStyle}
-                                        onClick={()=> alert("3333")}
-                                        title="ПОДРОБНЕЕ"
-                                        actionIcon={
-                                            <>
-                                                <IconButton
-                                                    sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                                                    aria-label={`info about ${item.title}`}
-                                                >
-                                                    <img style={{
-                                                        float: "left",
-                                                        marginRight: "calc( (100vw - 768px)/(1900 - 768) * (450 - 270) + 270px)",
-                                                    }} src="../ArrowNext.svg"/>
-                                                    <img style={{
-                                                    }} src="../ArrowSquareOut.svg"/>
-                                                </IconButton>
-                                            </>
+                                    <Link href={item.link}>
+                                        <ImageListItemBar
+                                            className={styles.textButtonStyle}
+                                            title="ПОДРОБНЕЕ"
+                                            actionIcon={
+                                                <>
+                                                    <IconButton
+                                                        sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                                                        aria-label={`info about ${item.title}`}
+                                                    >
+                                                        <img style={{
+                                                            float: "left",
+                                                            marginRight: "calc( (100vw - 768px)/(1900 - 768) * (450 - 270) + 270px)",
+                                                        }} src="../ArrowNext.svg"/>
+                                                        <img style={{
+                                                        }} src="../ArrowSquareOut.svg"/>
+                                                    </IconButton>
+                                                </>
 
-                                        }
-                                    />
+                                            }
+                                        /> </Link>
                                 </ImageListItem>
+
+
                                 <div>
                                     <div>
                                         <img style={{
@@ -167,42 +172,46 @@ export default function Project2() {
                                 margin: "auto",
                                 width: "92%",
                                 paddingTop: 50,
-                                marginLeft: "5%",
-                                marginRight: 10
+                                marginRight: 10,
+                                justifyContent: "center"
                             }}>
                                 <ImageListItem >
-                                    <img
-                                        style={{
-                                            width: "100%",
-                                            height: "calc( (100vw - 768px)/(1900 - 768) * (510 - 340) + 340px)",
-                                        }}
-                                        src={item.url}
-                                        alt="../bh2.jpg"
-                                        loading="lazy"
-                                    />
+                                    <div style={{width: "100%", display: "flex", alignItems: "center", margin: "auto", justifyContent: "center"}}>
+                                        <img
+                                            style={{
+                                                width: "90vw",
+                                                maxHeight: "calc( (100vw - 768px)/(1900 - 768) * (510 - 340) + 340px)",
+                                            }}
+                                            src={item.url}
+                                            alt="../bh2.jpg"
+                                            loading="lazy"
+                                        />
+                                    </div>
 
-                                    <ImageListItemBar
-                                        className={styles.textButtonStyle}
-                                        onClick={()=> console.log("3333")}
-                                        title="ПОДРОБНЕЕ"
-                                        actionIcon={
-                                            <>
-                                                <IconButton
-                                                    sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                                                    aria-label={`info about ${item.title}`}
-                                                >
-                                                    <img style={{
-                                                        float: "left",
-                                                        marginRight: "calc( (100vw - 768px)/(1900 - 768) * (450 - 270) + 270px)",
-                                                    }} src="../ArrowNext.svg"/>
-                                                    <img style={{
-                                                    }} src="../ArrowSquareOut.svg"/>
-                                                </IconButton>
-                                            </>
+                                    <Link href={item.link}>
+                                        <ImageListItemBar
+                                            className={styles.textButtonStyle}
+                                            title="ПОДРОБНЕЕ"
+                                            actionIcon={
+                                                <>
+                                                    <IconButton
+                                                        sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                                                        aria-label={`info about ${item.title}`}
+                                                    >
+                                                        <img style={{
+                                                            float: "left",
+                                                            marginRight: "calc( (100vw - 768px)/(1900 - 768) * (450 - 270) + 270px)",
+                                                        }} src="../ArrowNext.svg"/>
+                                                        <img style={{
+                                                        }} src="../ArrowSquareOut.svg"/>
+                                                    </IconButton>
+                                                </>
 
-                                        }
-                                    />
+                                            }
+                                        /></Link>
                                 </ImageListItem>
+
+
 
 
                             </div>
@@ -218,17 +227,19 @@ export default function Project2() {
                     margin: "auto",
                     paddingLeft: "3%"
                 }}>
-                    <div>
+                    <div style={{display: "flex", margin: "auto", alignItems: "center", justifyContent: cardText}}>
                         <img style={{
                             padding: 10,
                             width: "100%",
+                            maxHeight: 150
                         }}
                              src={cardText[cardNumber].url1}/>
                     </div>
-                    <div>
+                    <div style={{display: "flex", margin: "auto", alignItems: "center", justifyContent: cardText}}>
                         <img style={{
                             padding: 10,
                             width: "100%",
+                            maxHeight: 150
                         }}
                              src={cardText[cardNumber].url2}/>
                     </div>
