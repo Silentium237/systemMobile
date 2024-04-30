@@ -13,7 +13,7 @@ export default function ProjectDropDownList(props) {
                 fontStyle: "normal",
                 fontWeight: 400}} className={styleDropDown.dropdownContent}>
                 <div className={styleDropDown.divStyle}>
-                    <span >
+                    <span style={{width: "30%"}}>
                         <Link href={'/projectB2B'} >
                              <div >
                             <img style={{border: "1px solid #56c5ff"}} width="347px" src="../b2bProjectBigScreen1.png"/>
@@ -23,23 +23,25 @@ export default function ProjectDropDownList(props) {
                         </div>
                         </Link>
                     </span>
-                    <span>
-                        <Link href={'/projectBeautyHouse'}>
+                    <span style={{width: "40%",marginLeft: "15%"}}>
+                        <Link href={'/projectMMM'}>
                              <div >
-                            <img style={{border: "1px solid #56c5ff"}} width="347px" src="../beautyhouseProjectBigScreen1.png"/>
+                            <img style={{border: "1px solid #56c5ff"}} width="42%" src="../1.png"/>
                          </div>
                          <div className={styleDropDown.subTitle}>
                             подробнее <img src="../ArrowBlack.svg"/>
                         </div>
                         </Link>
                     </span>
-                    <span>
+                    <span style={{width: "40%"}}>
+                        <Link href={'/projectEvesell'} >
                          <div >
-                              <img src="../dropDownProject.png"/>
+                              <img src="../6.png" width="80%"/>
                          </div>
                          <div className={styleDropDown.subTitle}>
                             подробнее <img src="../ArrowBlack.svg"/>
                         </div>
+                            </Link>
                     </span>
                 </div>
                 <hr className={styleDropDown.hr}/>

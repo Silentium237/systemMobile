@@ -4,32 +4,29 @@ import WriteMe from "../components/WriteMe";
 import style from "../styles/Service.module.css"
 import styleProject from "../styles/ProjectOne.module.css"
 
-import MainImgForAnotherPage from "../components/MainImgForAnotherPage";
-import Cooperation from "../components/Cooperation";
 import {useState} from "react";
 import Cooperation2 from "../components/Cooperation2";
 import Link from "next/link";
 import {Button} from "@mui/material";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+
 import styleOurValue from "../styles/OurValue.module.css";
-import styles from "../styles/Cooperation.module.css";
 
 
 
 const objForMainCoal = [
     {
         name: "ЦЕЛИ",
-        text: "Создать максимально удобный сервис для совершения онлайн заказов и покупок товара различного назначения и характеристик",
+        text: "Оптимизация процессов: Повышение эффективности взаимодействия между различными отделами компании, сокращение времени на выполнение рабочих задач и улучшение синхронизации данных позволяет оптимизировать бизнес-процессы и улучшить общую производительность.",
         open: false
     },
     {
         name: "ЗАДАЧИ",
-        text: "Выбор оптимальной технологии для проектирование базы данных способной, способной за доли секунд обрабатывать сотню тысяч позиций товаров",
+        text: "Управление задачами и расписанием сотрудников. Отслеживание местоположения и маршрута сотрудников в реальном времени. Передача информации о заданиях и клиентах сотрудникам на выезде.",
         open: false
     }]
 
 
-export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestva,services}){
+export default function projectMMM ({cardText, tekhnologii, modeliSotrudnichestva,services}){
     const [show , setShow] =useState(false)
     const ChangeShowText = () => {
         setShow(!show)
@@ -58,61 +55,64 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
     }
 
     let itemGoalFirst = [
-        {goal: "Создать максимально удобный сервис для совершения " +
-                "онлайн заказов и покупок товара различного назначения и характеристик "
+        {goal: "Увеличение производительности: Обеспечение сотрудников необходимыми инструментами, чтобы они могли эффективно планировать свою работу, управлять задачами и выполнить их в срок"
 
-        },  {goal: "Повысить частоту повторных покупок и стабильность товарооборота  "
+        },  {goal: "Улучшение коммуникации: Обеспечение легкого и быстрого обмена информацией между сотрудниками и руководством, что позволяет оперативно реагировать на изменения в планах и требованиях клиентов"
 
         },
     ]
     let itemGoalSecond = [
-        {goal: "Обесбечить приток новых клиентов и финансов, интегрирую различные методы стимуляции в данном направлении"
+        {goal: "Повышение качества обслуживания клиентов: Снижение времени, затрачиваемого на административные задачи, позволяет сотрудникам больше времени уделить обслуживанию клиентов, выявлению их потребностей и предложению уникальных решений"
 
-        },  {goal: "Разработать маштабируемый проект с возможностью в будущем расширяться, без каких-либо существенных доработок"
+        },  {goal: " Оптимизация процессов: Повышение эффективности взаимодействия между различными отделами компании, сокращение времени на выполнение рабочих задач и улучшение синхронизации данных позволяет оптимизировать бизнес-процессы и улучшить общую производительность"
 
         },
     ]
     let itemTaskFirst = [
-        {task: "Выбор оптимальной технологии для проектирование базы данных способной, способной за доли секунд обрабатывать сотню тысяч позиций товаров "
+        {task: "Управление задачами и расписанием сотрудников."
 
-        },     {task: "Выбрать грамотный подход для реализации бухгалтерского аспекта на стороне 1С, обеспечив прозрачность и простоту получения всех необходимых данных "
+        },     {task: "Отслеживание местоположения и маршрута сотрудников в реальном времени"
         },
 
     ]
     let itemTaskSecond = [
-        {task: "Реализовать быструю передачу данных из базы данных клиенту, выполнив все необходимые действия с данными, учитывая все необходимые входные параметры"
+        {task: "Передача информации о заданиях и клиентах сотрудникам на выезде"
 
-        },     {task: "Отображать конечному пользователю всю необходимую информацию с максимально быстрым откликом на любые его действия, не перегружая излишней информацией"
+        },     {task: "Возможность сотрудникам отмечать выполненные задачи и вносить отчеты о проделанной работе"
         },
 
     ]
     let imgProjectArray = [
         {
-            projectImgBig: "../b2bProjectBigScreen1.png",
-            projectImgSmall: "../projectSmall1.png",
+            projectImgBig: "../6.png",
+            projectImgSmall: "../6.png",
         },
         {
-            projectImgBig: "../b2bProjectBigScreen2.png",
-            projectImgSmall: "../projectSmall1.png",
+            projectImgBig: "../7.png",
+            projectImgSmall: "../7.png",
         },
         {
-            projectImgBig: "../b2bProjectBigScreen3.png",
-            projectImgSmall: "../projectSmall1.png",
+            projectImgBig: "../8.png",
+            projectImgSmall: "../8.png",
         },
         {
-            projectImgBig: "../b2bProjectBigScreen4.png",
-            projectImgSmall: "../projectSmall1.png",
+            projectImgBig: "../9.png",
+            projectImgSmall: "../9.png",
         },
     ]
 
-    let mainTextDescription = ["B2B сайт по продаже бытовой химии и продуктов питания - это онлайн платформа, предназначенная для закупок продуктов массового потребления для бизнеса. На нашем сайте вы найдете широкий ассортимент товаров, который поможет вашему бизнесу удовлетворить потребности клиентов в бытовой химии и продуктах питания.",
-        "Мы сотрудничаем с проверенными поставщиками, что гарантирует качество продукции и надежность поставок. Наш B2B сайт предлагает удобные инструменты для заказа и оплаты товаров, а также оперативную доставку по всей стране.\n" +
-        "\n" +
-        "Не теряйте времени на поиск надежных поставщиков - обратитесь к нам и получите доступ к широкому ассортименту бытовой химии и продуктов питания для вашего бизнеса. Доверьтесь b2bSellwin.by и упростите процесс закупок для своей компании!"]
+    let mainTextDescription = ["Наше мобильное решение предназначено для сетей и поставщиков, у которых имеются выездные сотрудники - мерчандайзеры, торговые представители и супервайзеры. С помощью нашего приложения сотрудники могут эффективно планировать свою работу, видеть заказы на текущий день и обновлять информацию о клиентах.","Благодаря нашему решению, выездные сотрудники могут легко организовывать свои рабочие процессы, оперативно реагировать на изменения в планах и поддерживать актуальные данные о клиентах. Это позволяет оптимизировать работу сети и улучшить качество обслуживания клиентов.\n" +
+    "\n" +
+    "Наше мобильное приложение обеспечивает простой и удобный доступ к необходимой информации и инструментам для эффективной работы сотрудников на выезде. С нами ваша команда всегда будет в курсе своих задач и сможет оперативно реагировать на текущие потребности рынка."]
 
 
 
-
+    const technologies = [
+        "PHP",
+        "React",
+        "Kotlin",
+        "1C",
+    ]
 
 
     return(
@@ -122,11 +122,16 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                 <div style={{width: 1084,  alignItems: "center", justifyContent: "center", margin: "auto", }}>
 
                     <div className={style.breadCrams}>
-                        <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
-                        <span>Проекты и решения &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
-                        <span style={{color: "black"}}>B2B</span>
+                        <Link href={"/"} style={{textDecoration: "none", color: "gray"}}>
+                            <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
+                        </Link>
+                        <Link href={"/project"} style={{textDecoration: "none", color: "gray"}}>
+                            <span>Проекты и решения &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
+                        </Link>
+
+                        <span style={{color: "black"}}>Evesell</span>
                     </div>
-                    <div className={style.title}>B2B</div>
+                    <div className={style.title}>Evesell</div>
 
                 </div>
 
@@ -142,7 +147,7 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                         </video>
                     </div>:  <>
                         <img onClick={()=> setShowBigSizeImg(true)} style={{position: "absolute", paddingTop: 10, paddingLeft: 10, cursor: "pointer"}} src="../glassPlus.svg"/>
-                        <div style={{border: "1px solid rgba(0, 146, 255, 0.3)"}}><img width="624" height="433" src={imgProjectArray[indexImg].projectImgBig}/></div>
+                        <div style={{border: "1px solid rgba(0, 146, 255, 0.3)", alignItems: "center", justifyContent: "center", margin: "auto", display: "flex"}}><img style={{maxWidth: 624, height:433 }} src={imgProjectArray[indexImg].projectImgBig}/></div>
 
                     </>}
 
@@ -165,22 +170,26 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                         Краткая информация:
                     </div>
                     <div style={{height: 150 ,paddingLeft: 50, width: 410}} className={styleProject.cardSubTitle}>
-                        Данный сайт создан с изпользованием современного стэка технологий, что обеспечивает его высокую продуктивность, стабильность и уникальность.
+                        Мобильное решение для сетей и поставщиков, у которых есть выездные сотрудники: мерчандайзеры, торговые представители и супервайзеры.
+В приложении сотрудник осуществляет: планирование, видит, заказ на день, а так же обновляет информацию о клиентах.
                     </div>
                     <div style={{height: 50 ,paddingLeft: 50}} className={styleProject.cardTitle}>
                         Технологии:
                     </div>
                     <div style={{height: 100 ,paddingLeft: 50}}>
                         <ul style={{listStyleType: "none"}}>
-                            <li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> Typescript</li>
-                            <li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> NestJS</li>
-                            <li className={styleProject.li}> <img  style={{paddingRight: 20}} src="../Ellipse.svg"/> React JS</li>
+                            {technologies.map((item, index)=>(
+                                <li className={styleProject.li} key={index}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/>{item}</li>
+                            ))}
+
+                            {/*<li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> NestJS</li>*/}
+                            {/*<li className={styleProject.li}> <img  style={{paddingRight: 20}} src="../Ellipse.svg"/> React JS</li>*/}
                         </ul>
                     </div>
-                    <div style={{height: 20 ,paddingLeft: 50}} className={styleProject.cardTitle}>
+                    <div style={{height: 20 ,paddingLeft: 50, paddingTop: 40}} className={styleProject.cardTitle}>
                         Презентации и мультимедийный материал:
                     </div>
-                    <div style={{height: 50 ,padding: 50, marginBottom: 70}}>
+                    <div style={{height: 50 ,paddingLeft: 50,paddingRight:50,paddingTop: 40, marginBottom: 70}}>
                         <span><img style={{paddingRight: 15}} src="../wordIcon.svg"/></span>
                         <span><img style={{paddingRight: 15}} src="../powerPointIcon.svg"/></span>
                         <span><img src="../pdfIcon.svg"/></span>
@@ -257,13 +266,14 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                 <div  className={styleProject.divDescription}>
 
                        <span style={{ width: 500}}>
-                       <p className={styleProject.descriptionTitle}>Подробное описание</p>
+                      <p className={styleProject.descriptionTitle}>Подробное описание</p>
                 <p className={styleProject.descriptionText}>
                     {mainTextDescription[0]}
                     {show ? <>
                         {mainTextDescription[1]}
                     </>: null}
                   </p>
+
 
                            <div className={styleProject.buttonDescription} onClick={()=> ChangeShowText()}>
                                <div className={styleProject.buttonDescriptionText}>
@@ -273,14 +283,12 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                 </span>
 
                     <span>
-                     <img src={imgProjectArray[0].projectImgBig}  />
+                     <img src="../description.png"  />
                 </span>
 
 
 
                 </div>
-
-
             </div>
             <div className={styleProject.mainDivMobile}>
                 <div className={style.breadCramsMobile}>
@@ -290,9 +298,9 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                     <Link  style={{textDecoration: "none", color: "gray", opacity: 0.7}} href={`/project`}>
                         <span>Проекты и решения &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
                     </Link>
-                    <span style={{color: "black"}}>B2B</span>
+                    <span style={{color: "black"}}>Evesell</span>
                 </div>
-                <div className={style.titleMobile}>B2B</div>
+                <div className={style.titleMobile}>Evesell</div>
 
                 <span>
                     {showVideo ?   <div style={{position: "center", alignItems: "center", margin: "auto", display: "flex", justifyContent: "center"}}>
@@ -330,19 +338,20 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                         Краткая информация:
                     </div>
                     <div className={styleProject.cardSubTitleMobile}>
-                        Данный сайт создан с изпользованием современного стэка технологий, что обеспечивает его высокую продуктивность, стабильность и уникальность.
+                        Мобильное решение для сетей и поставщиков, у которых есть выездные сотрудники: мерчандайзеры, торговые представители и супервайзеры.
+В приложении сотрудник осуществляет: планирование, видит, заказ на день, а так же обновляет информацию о клиентах.
                     </div>
                     <div className={styleProject.cardTitleMobile}>
                         Технологии:
                     </div>
                     <div style={{height: 100, marginLeft: "5%"}}>
                         <ul style={{listStyleType: "none"}}>
-                            <li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> Typescript</li>
-                            <li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> NestJS</li>
-                            <li className={styleProject.li}> <img  style={{paddingRight: 20}} src="../Ellipse.svg"/> React JS</li>
+                            {technologies.map((item, index)=> (
+                                <li className={styleProject.li} key={index}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/>{item}</li>
+                            ))}
                         </ul>
                     </div>
-                    <div className={styleProject.cardTitleMobile}>
+                    <div className={styleProject.cardTitleMobile} style={{paddingTop: 50}}>
                         Презентации и мультимедийный материал:
                     </div>
                     <div style={{height: 50 ,padding: 50, marginBottom: 70}}>
@@ -383,20 +392,15 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                 {showText ? <div className={styleProject.mainTextDescriptionMobile} >
                     {mainTextDescription[1]}
                 </div>: null}
-                <div className={styles.readAllText} style={{marginTop: 30 }}
-                     onClick={()=> setShowText(!showText)}>{!showText ? "ЧИТАТЬ ПОЛНОСТЬЮ" : "СВЕРНУТЬ" }
-                </div>
-                <br/>
-                <br/>
-                <br/>
+                <Button className={styleProject.buttonVideoMobile} style={{marginTop: 20, marginBottom: 60}}  onClick={()=> setShowText(!showText)}>
+                    читать полностью
+                </Button>
             </div>
 
 
 
 
-            <div style={{paddingTop: 130}}>
-                <Cooperation2 modeliSotrudnichestva={modeliSotrudnichestva}/>
-            </div>
+            <Cooperation2 modeliSotrudnichestva={modeliSotrudnichestva}/>
 
 
             <Partners/>

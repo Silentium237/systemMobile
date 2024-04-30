@@ -96,7 +96,8 @@
     line-height: 38px;
     letter-spacing: 0em;
     color: black;
-    padding-left: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .subTitleCoopNext {
     font-size: 16px;

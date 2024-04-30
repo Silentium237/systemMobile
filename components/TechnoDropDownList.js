@@ -1,4 +1,5 @@
 import styleDropDown from "../styles/MainContainer.module.css"
+import Link from "next/link";
 
 
 
@@ -20,11 +21,16 @@ export default function TechnoDropDownList({showMenu, setShowMenu, tekhnologii})
                          <div >
                              <ul style={{listStyleType: "none"}}>
                                  {tekhnologii.data.map((item, index) =>(
-                                     <div key={index}>
-                                         {item.group === "FRONTEND"  ?   <li className={styleDropDown.subTitle} key={index}>
-                                             <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
-                                         </li> : null}
-                                     </div>
+
+                                         <div key={index}>
+                                             {item.group === "FRONTEND"  ?
+                                                 <Link  style={{textDecoration: "none"}} href={`/techno/${item.id}`}>
+                                                 <li className={styleDropDown.subTitle} key={index}>
+                                                 <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
+                                             </li> </Link> : null}
+                                         </div>
+
+
                                  ))}
                              </ul>
                          </div>
@@ -38,9 +44,13 @@ export default function TechnoDropDownList({showMenu, setShowMenu, tekhnologii})
                              <ul style={{listStyleType: "none"}}>
                                   {tekhnologii.data.map((item, index) =>(
                                       <div key={index}>
-                                          {item.group === "BACKEND" ? <li className={styleDropDown.subTitle} key={index}>
-                                              <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
-                                          </li> : null}
+                                          {item.group === "BACKEND" ?
+                                              <Link style={{textDecoration: "none"}} href={`/techno/${item.id}`}>
+                                                  <li className={styleDropDown.subTitle} key={index}>
+                                                      <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
+                                                  </li>
+                                              </Link>
+                                               : null}
                                       </div>
                                   ))}
                              </ul>
@@ -56,9 +66,10 @@ export default function TechnoDropDownList({showMenu, setShowMenu, tekhnologii})
 
                                   {tekhnologii.data.map((item, index) =>(
                                       <div key={index}>
-                                          {item.group === "МОБИЛЬНАЯ РАЗРАБОТКА" ? <li className={styleDropDown.subTitle} key={index}>
+                                          {item.group === "МОБИЛЬНАЯ РАЗРАБОТКА" ? <Link style={{textDecoration: "none"}} href={`/techno/${item.id}`}>
+                                              <li className={styleDropDown.subTitle} key={index}>
                                               <img style={{paddingRight: 20}} src="../Ellipse.svg"/> {item.name}
-                                          </li> : null}
+                                          </li></Link> : null}
                                       </div>
                                   ))}
                              </ul>

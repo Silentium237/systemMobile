@@ -96,7 +96,7 @@ export default function Cooperation2({modeliSotrudnichestva}) {
                             <div  style={{padding: "5%", backgroundImage: `URL(${item.preview_img})`, height: 246, margin: "5%"}}>
 
                             </div>
-                            <div className={styles.titleCoopNextMobile}>Фиксированный проект (Fixed Project)</div>
+                            <div className={styles.titleCoopNextMobile}>{item.name}</div>
                             <hr className={styles.hrStyle} />
                             <div className={shotText ? styles.subTitleCoopNextMobileShot : styles.subTitleCoopNextMobileAll }>
                                 {item.preview_text}

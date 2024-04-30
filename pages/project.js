@@ -22,6 +22,20 @@ export default function project ({cardText, tekhnologii, modeliSotrudnichestva,s
                 "позволяет легко и быстро сформировать карзину и оформить заказ ...",
             link: "/projectB2B"
         },
+        {   title: "MMM",
+            img: "../4.png",
+            description: "Комплексное решение для организация эффективной работы с " +
+                "выездными сотрудниками-экспедиторами/водителями, верификация процесса передачи" +
+                " грузов и документов в каждом из звеньев логистической цепочки",
+            link: "/projectMMM"
+        },
+        {   title: "Evesell",
+            img: "../6.png",
+            description: "Мобильное решение для сетей и поставщиков, у которых есть выездные сотрудники: мерчандайзеры, торговые представители и супервайзеры. " +
+                "В приложении сотрудник осуществляет: планирование, видит, заказ на день, а так же обновляет информацию о клиентах.",
+            link: "/projectEvesell"
+        },
+
         {   title: "BeautyHouse.by",
             img: "../projectBeautyHouse.png",
             description: "BeautyHouse - это огромный дом, предназначение которого делать" +
@@ -82,8 +96,8 @@ export default function project ({cardText, tekhnologii, modeliSotrudnichestva,s
                 </div>
                 {itemProject.map((item , index)=>(
                     <div key={index} className={styleProject.cardProject}>
-                <span style={{width: "50%"}}>
-                    <img style={{width: "100%"}} src={item.img}/>
+                <span style={{width: "50%", height: 400}}>
+                    <img style={{width: "100%", height: 400}} src={item.img}/>
                 </span>
                         <span style={{}}>
                     <div style={{ height: 100, paddingTop: 58, paddingLeft: 40, }}   className={styleProject.title}>

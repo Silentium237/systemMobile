@@ -17,6 +17,7 @@ import Alert from "@mui/material/Alert";
 import { Resend } from 'resend';
 
 
+
 const Transition = forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -29,19 +30,7 @@ const EmailTemplate = ({firstName}) => (
 
 // const resend = new Resend(process.env.RESEND_API_KEY);
 const resend = new Resend('re_F4L3rQZe_BbjoodK1A2CRg3QSzao3xpQN');
-const Send = async (req, res) => {
-    const { data, error } =await resend.emails.send({
-            from: 'onboarding@resend.dev',
-            to: 'vel7527727@gmail.com',
-            subject: 'Hello world',
-            html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
-         })
-    if (error) {
-        return res.status(400).json(error);
-    }
 
-    res.status(200).json(data);
-};
 
 
 
@@ -61,18 +50,30 @@ export default function contact ({cardText, tekhnologii, modeliSotrudnichestva,s
         let value = "*Имя:* " + name + ". " + '\n' + "*Email:* " + email + ". " + '\n' + "*Телефон:* " + phone + ". " + '\n' + "*Текст сообщения:* " + text + ". " + '\n' + "*Организация:* " + companyName + ". " + '\n' + "*Отправка сообщения с SellwinSystem* "
         await CrudService.get(value)
 
-        try {
-          await resend.emails.send({
-                from: 'onboarding@resend.dev',
-                to: 'vel7527727@gmail.com',
-                subject: 'Hello World',
-                html: `<p>Hello </p>`
-          })
-            alert("56555")
-        }catch (error){
-            alert("7777")
-            console.log(error)
+        const API_URL = "https://devnest.sellwin.by/sender"
+
+        let body = {
+            to: "vel7527727@gmail.com", // list of receivers
+            from: "b2b_info@sellwin.by", // sender address
+            subject: "Новое сообщение с sellwin-system", // Subject line
+            //   text: "welcome", // plaintext body
+            html: `<p>test</p>`,
         }
+
+        let options = {
+            method: 'POST',
+            body: body,
+            timeout: 10000,
+            headers: {
+                "Content-Type": "application/json; charset=utf-8",
+            },
+            mode: "cors",
+            crossdomain: true,
+
+        }
+        const request = new Request(API_URL, options);
+        const response = await fetch(request);
+        console.log(response)
         removeValue()
         setOpen(true)
     }

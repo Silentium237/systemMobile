@@ -19,17 +19,17 @@ import styles from "../styles/Cooperation.module.css";
 const objForMainCoal = [
     {
         name: "ЦЕЛИ",
-        text: "Создать максимально удобный сервис для совершения онлайн заказов и покупок товара различного назначения и характеристик",
+        text: "Сокращение времени на выполнение операций благодаря упрощенной и стандартизированной передаче информации и документов между сотрудниками и звеньями логистической цепочки",
         open: false
     },
     {
         name: "ЗАДАЧИ",
-        text: "Выбор оптимальной технологии для проектирование базы данных способной, способной за доли секунд обрабатывать сотню тысяч позиций товаров",
+        text: "Отслеживание местоположения сотрудников: приложение позволяет контролировать местоположение выездных сотрудников в реальном времени, что помогает оптимизировать работу и предотвращать задержки.",
         open: false
     }]
 
 
-export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestva,services}){
+export default function projectMMM ({cardText, tekhnologii, modeliSotrudnichestva,services}){
     const [show , setShow] =useState(false)
     const ChangeShowText = () => {
         setShow(!show)
@@ -58,61 +58,68 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
     }
 
     let itemGoalFirst = [
-        {goal: "Создать максимально удобный сервис для совершения " +
-                "онлайн заказов и покупок товара различного назначения и характеристик "
+        {goal: "Сокращение времени на выполнение операций благодаря упрощенной и стандартизированной передаче информации и документов между сотрудниками и звеньями логистической цепочки"
 
-        },  {goal: "Повысить частоту повторных покупок и стабильность товарооборота  "
+        },  {goal: "Снижение риска ошибок и потерь за счет четкого контроля и мониторинга процесса передачи грузов и документов"
 
         },
     ]
     let itemGoalSecond = [
-        {goal: "Обесбечить приток новых клиентов и финансов, интегрирую различные методы стимуляции в данном направлении"
+        {goal: "Увеличение производительности и эффективности работы сотрудников за счет автоматизации и оптимизации задач и маршрутов"
 
-        },  {goal: "Разработать маштабируемый проект с возможностью в будущем расширяться, без каких-либо существенных доработок"
+        },  {goal: "Улучшение качества обслуживания клиентов за счет быстрой реакции на их запросы и информирование о статусе выполнения заказа"
 
         },
     ]
     let itemTaskFirst = [
-        {task: "Выбор оптимальной технологии для проектирование базы данных способной, способной за доли секунд обрабатывать сотню тысяч позиций товаров "
+        {task: "Отслеживание местоположения сотрудников: приложение позволяет контролировать местоположение выездных сотрудников в реальном времени, что помогает оптимизировать работу и предотвращать задержки."
 
-        },     {task: "Выбрать грамотный подход для реализации бухгалтерского аспекта на стороне 1С, обеспечив прозрачность и простоту получения всех необходимых данных "
+        },     {task: "Оптимизация маршрутов и расписания работы сотрудников: приложение позволяет создавать оптимальные маршруты для экспедиторов/водителей, учитывая трафик, время доставки и другие факторы"
         },
 
     ]
     let itemTaskSecond = [
-        {task: "Реализовать быструю передачу данных из базы данных клиенту, выполнив все необходимые действия с данными, учитывая все необходимые входные параметры"
+        {task: "Ведение электронных отчетов: с помощью приложения сотрудники могут заполнять электронные отчеты о выполненной работе, переданных грузах и других данных, что упрощает процесс учета и контроля"
 
-        },     {task: "Отображать конечному пользователю всю необходимую информацию с максимально быстрым откликом на любые его действия, не перегружая излишней информацией"
+        },     {task: "Подтверждение доставки: приложение позволяет экспедиторам/водителям подтверждать доставку грузов и документов с помощью цифровой подписи или фотоотчетов, что обеспечивает верификацию процесса передачи"
         },
 
     ]
     let imgProjectArray = [
         {
-            projectImgBig: "../b2bProjectBigScreen1.png",
-            projectImgSmall: "../projectSmall1.png",
+            projectImgBig: "../1.png",
+            projectImgSmall: "../1.png",
         },
         {
-            projectImgBig: "../b2bProjectBigScreen2.png",
-            projectImgSmall: "../projectSmall1.png",
+            projectImgBig: "../2.png",
+            projectImgSmall: "../2.png",
         },
         {
-            projectImgBig: "../b2bProjectBigScreen3.png",
-            projectImgSmall: "../projectSmall1.png",
+            projectImgBig: "../3.png",
+            projectImgSmall: "../3.png",
         },
         {
-            projectImgBig: "../b2bProjectBigScreen4.png",
-            projectImgSmall: "../projectSmall1.png",
+            projectImgBig: "../4.png",
+            projectImgSmall: "../4.png",
         },
     ]
 
-    let mainTextDescription = ["B2B сайт по продаже бытовой химии и продуктов питания - это онлайн платформа, предназначенная для закупок продуктов массового потребления для бизнеса. На нашем сайте вы найдете широкий ассортимент товаров, который поможет вашему бизнесу удовлетворить потребности клиентов в бытовой химии и продуктах питания.",
-        "Мы сотрудничаем с проверенными поставщиками, что гарантирует качество продукции и надежность поставок. Наш B2B сайт предлагает удобные инструменты для заказа и оплаты товаров, а также оперативную доставку по всей стране.\n" +
-        "\n" +
-        "Не теряйте времени на поиск надежных поставщиков - обратитесь к нам и получите доступ к широкому ассортименту бытовой химии и продуктов питания для вашего бизнеса. Доверьтесь b2bSellwin.by и упростите процесс закупок для своей компании!"]
+    let mainTextDescription = ["Наше приложение предназначено для организации эффективной работы с выездными сотрудниками-экспедиторами и водителями, а также для верификации процесса передачи грузов и документов в каждом из звеньев логистической цепочки. \n" +
+    "\n" +
+    "С помощью нашего приложения менеджеры могут назначать задачи сотрудникам, отслеживать их выполнение, контролировать маршруты и время прибытия, а также сохранять всю необходимую информацию о заказах, грузах и клиентах.",
+        "Выездные сотрудники могут в реальном времени отмечать выполнение задач, загружать необходимые документы и отчёты, обмениваться информацией с офисом и клиентами. Для водителей предусмотрены инструменты для мониторинга груза, оптимизации маршрутов и обмена информацией с диспетчерами. " +
+        "Также в приложении реализована система верификации процесса передачи грузов и документов в каждом звене логистической цепочки. Это позволяет отслеживать всю цепочку передачи груза, уменьшать риски потери, повреждения или задержки груза, а также повысить прозрачность и эффективность работы всей логистической цепочки.Наше приложение поможет вашей компании улучшить организацию работы с выездными сотрудниками, упростить процесс обмена информацией и документами, а также повысить качество обслуживания клиентов."]
 
 
 
-
+        const technologies = [
+            "TypeScript",
+            "React",
+            "Kotlin",
+            "S3 Minio",
+            "Python",
+            "API(Telegram)",
+        ]
 
 
     return(
@@ -124,9 +131,9 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                     <div className={style.breadCrams}>
                         <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
                         <span>Проекты и решения &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
-                        <span style={{color: "black"}}>B2B</span>
+                        <span style={{color: "black"}}>MMM</span>
                     </div>
-                    <div className={style.title}>B2B</div>
+                    <div className={style.title}>MMM</div>
 
                 </div>
 
@@ -142,7 +149,7 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                         </video>
                     </div>:  <>
                         <img onClick={()=> setShowBigSizeImg(true)} style={{position: "absolute", paddingTop: 10, paddingLeft: 10, cursor: "pointer"}} src="../glassPlus.svg"/>
-                        <div style={{border: "1px solid rgba(0, 146, 255, 0.3)"}}><img width="624" height="433" src={imgProjectArray[indexImg].projectImgBig}/></div>
+                        <div style={{border: "1px solid rgba(0, 146, 255, 0.3)", alignItems: "center", justifyContent: "center", margin: "auto", display: "flex"}}><img style={{maxWidth: 624, height:433 }} src={imgProjectArray[indexImg].projectImgBig}/></div>
 
                     </>}
 
@@ -165,22 +172,25 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                         Краткая информация:
                     </div>
                     <div style={{height: 150 ,paddingLeft: 50, width: 410}} className={styleProject.cardSubTitle}>
-                        Данный сайт создан с изпользованием современного стэка технологий, что обеспечивает его высокую продуктивность, стабильность и уникальность.
+                       Комплексное решение для организация эффективной работы с выездными сотрудниками-экспедиторами/водителями, верификация процесса передачи грузов и документов в каждом из звеньев логистической цепочки
                     </div>
                     <div style={{height: 50 ,paddingLeft: 50}} className={styleProject.cardTitle}>
                         Технологии:
                     </div>
                     <div style={{height: 100 ,paddingLeft: 50}}>
                         <ul style={{listStyleType: "none"}}>
-                            <li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> Typescript</li>
-                            <li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> NestJS</li>
-                            <li className={styleProject.li}> <img  style={{paddingRight: 20}} src="../Ellipse.svg"/> React JS</li>
+                            {technologies.map((item, index)=>(
+                                <li className={styleProject.li} key={index}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/>{item}</li>
+                            ))}
+
+                            {/*<li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> NestJS</li>*/}
+                            {/*<li className={styleProject.li}> <img  style={{paddingRight: 20}} src="../Ellipse.svg"/> React JS</li>*/}
                         </ul>
                     </div>
-                    <div style={{height: 20 ,paddingLeft: 50}} className={styleProject.cardTitle}>
+                    <div style={{height: 20 ,paddingLeft: 50, paddingTop: 40}} className={styleProject.cardTitle}>
                         Презентации и мультимедийный материал:
                     </div>
-                    <div style={{height: 50 ,padding: 50, marginBottom: 70}}>
+                    <div style={{height: 50 ,paddingLeft: 50,paddingRight:50,paddingTop: 40, marginBottom: 70}}>
                         <span><img style={{paddingRight: 15}} src="../wordIcon.svg"/></span>
                         <span><img style={{paddingRight: 15}} src="../powerPointIcon.svg"/></span>
                         <span><img src="../pdfIcon.svg"/></span>
@@ -257,13 +267,14 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                 <div  className={styleProject.divDescription}>
 
                        <span style={{ width: 500}}>
-                       <p className={styleProject.descriptionTitle}>Подробное описание</p>
+                      <p className={styleProject.descriptionTitle}>Подробное описание</p>
                 <p className={styleProject.descriptionText}>
                     {mainTextDescription[0]}
                     {show ? <>
                         {mainTextDescription[1]}
                     </>: null}
                   </p>
+
 
                            <div className={styleProject.buttonDescription} onClick={()=> ChangeShowText()}>
                                <div className={styleProject.buttonDescriptionText}>
@@ -273,14 +284,12 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                 </span>
 
                     <span>
-                     <img src={imgProjectArray[0].projectImgBig}  />
+                     <img src="../description.png"  />
                 </span>
 
 
 
                 </div>
-
-
             </div>
             <div className={styleProject.mainDivMobile}>
                 <div className={style.breadCramsMobile}>
@@ -290,9 +299,9 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                     <Link  style={{textDecoration: "none", color: "gray", opacity: 0.7}} href={`/project`}>
                         <span>Проекты и решения &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
                     </Link>
-                    <span style={{color: "black"}}>B2B</span>
+                    <span style={{color: "black"}}>MMM</span>
                 </div>
-                <div className={style.titleMobile}>B2B</div>
+                <div className={style.titleMobile}>MMM</div>
 
                 <span>
                     {showVideo ?   <div style={{position: "center", alignItems: "center", margin: "auto", display: "flex", justifyContent: "center"}}>
@@ -330,19 +339,19 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                         Краткая информация:
                     </div>
                     <div className={styleProject.cardSubTitleMobile}>
-                        Данный сайт создан с изпользованием современного стэка технологий, что обеспечивает его высокую продуктивность, стабильность и уникальность.
+                        Комплексное решение для организация эффективной работы с выездными сотрудниками-экспедиторами/водителями, верификация процесса передачи грузов и документов в каждом из звеньев логистической цепочки
                     </div>
                     <div className={styleProject.cardTitleMobile}>
                         Технологии:
                     </div>
                     <div style={{height: 100, marginLeft: "5%"}}>
                         <ul style={{listStyleType: "none"}}>
-                            <li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> Typescript</li>
-                            <li className={styleProject.li}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/> NestJS</li>
-                            <li className={styleProject.li}> <img  style={{paddingRight: 20}} src="../Ellipse.svg"/> React JS</li>
+                            {technologies.map((item, index)=> (
+                                <li className={styleProject.li} key={index}> <img style={{paddingRight: 20}} src="../Ellipse.svg"/>{item}</li>
+                            ))}
                         </ul>
                     </div>
-                    <div className={styleProject.cardTitleMobile}>
+                    <div className={styleProject.cardTitleMobile} style={{paddingTop: 50}}>
                         Презентации и мультимедийный материал:
                     </div>
                     <div style={{height: 50 ,padding: 50, marginBottom: 70}}>
@@ -383,6 +392,9 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
                 {showText ? <div className={styleProject.mainTextDescriptionMobile} >
                     {mainTextDescription[1]}
                 </div>: null}
+                {/*<Button className={styleProject.buttonVideoMobile} style={{marginTop: 20, marginBottom: 60}}  onClick={()=> setShowText(!showText)}>*/}
+                {/*    читать полностью*/}
+                {/*</Button>*/}
                 <div className={styles.readAllText} style={{marginTop: 30 }}
                      onClick={()=> setShowText(!showText)}>{!showText ? "ЧИТАТЬ ПОЛНОСТЬЮ" : "СВЕРНУТЬ" }
                 </div>
@@ -393,10 +405,10 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
 
 
 
-
             <div style={{paddingTop: 130}}>
                 <Cooperation2 modeliSotrudnichestva={modeliSotrudnichestva}/>
             </div>
+
 
 
             <Partners/>
@@ -408,7 +420,7 @@ export default function projectB2B ({cardText, tekhnologii, modeliSotrudnichestv
 }
 
 export const getServerSideProps = async () =>{
-    console.log("11111111111")
+
 
 
     // Call an external API endpoint to get posts.
