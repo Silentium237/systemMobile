@@ -70,6 +70,7 @@ export default function contact ({cardText, tekhnologii, modeliSotrudnichestva,s
           })
             alert("56555")
         }catch (error){
+            alert("7777")
             console.log(error)
         }
         removeValue()
