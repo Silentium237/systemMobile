@@ -38,7 +38,7 @@ export default function techno({tekhnologii, services, modeliSotrudnichestva}) {
 
 
     const changeCardNumber = (value) => {
-        if (value === "right" && number !== listItemFrontEnd.length - 1) {
+        if (value === "right" ) {
             setNumber(number + 1)
             setDelNumber(delNumber + 1)
         } else if (value === "left" && number > 0) {
@@ -88,7 +88,11 @@ export default function techno({tekhnologii, services, modeliSotrudnichestva}) {
                                         <ul style={{listStyleType: "none"}}>
                                             {tekhnologii.data.map((item, index) => (
                                                 <div key={index}>
-                                                    {itemTitle.title === item.group ? <li key={index} className={styleTechno.li}><img src="../Ellipse.svg"/> {item.name}</li>: null}
+                                                    {itemTitle.title === item.group ?
+                                                        <Link style={{textDecoration: "none"}} href={`/techno/${item.id}`}>
+                                                            <li key={index} className={styleTechno.li}><img src="../Ellipse.svg"/> {item.name}</li>
+                                                        </Link>
+                                                        : null}
                                                 </div>
                                             ))}
                                         </ul>
@@ -123,7 +127,7 @@ export default function techno({tekhnologii, services, modeliSotrudnichestva}) {
                                         <div className={styleTechno.subTitleCardTechnologies}>
                                             {item.preview_text}
                                         </div>
-                                        <Link href={`/techno/${item.id}`}>
+                                        <Link style={{textDecoration: "none"}} href={`/techno/${item.id}`}>
                                             <div className={styleTechno.buttonNext}>
                                                 Подробнее <img style={{position: "absolute", paddingTop: 4, paddingLeft: 15}}
                                                                src="../Arrow2.svg"/>
@@ -186,10 +190,13 @@ export default function techno({tekhnologii, services, modeliSotrudnichestva}) {
                                                     {tekhnologii.data.map((item, index) => (
                                                         <>
                                                             {itemTitle.title === item.group ?
-                                                                <li key={index} className={styleTechno.liMobile}>
-                                                                    <img src="../Ellipse.svg" style={{paddingRight: 5}}/>
-                                                                    {item.name}
-                                                                </li>: null}
+                                                                <Link style={{textDecoration: "none"}} href={`/techno/${item.id}`}>
+                                                                    <li key={index} className={styleTechno.liMobile}>
+                                                                        <img src="../Ellipse.svg" style={{paddingRight: 5}}/>
+                                                                        {item.name}
+                                                                    </li>
+                                                                </Link>
+                                                               : null}
                                                         </>
                                                     ))}
                                                 </ul>

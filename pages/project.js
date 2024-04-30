@@ -8,6 +8,7 @@ import MainImgForAnotherPage from "../components/MainImgForAnotherPage";
 import Cooperation from "../components/Cooperation";
 import Link from "next/link";
 import Cooperation2 from "../components/Cooperation2";
+import styleContact from "../styles/Contacts.module.css";
 
 export default function project ({cardText, tekhnologii, modeliSotrudnichestva,services}){
 
@@ -66,24 +67,25 @@ export default function project ({cardText, tekhnologii, modeliSotrudnichestva,s
     return(
         <MainContainer services={services} tekhnologii={tekhnologii}>
             {/*<MainImgForAnotherPage/>*/}
-            <div style={{width: 1084,  alignItems: "center", justifyContent: "center", margin: "auto"}}>
+            <div className={styleProject.mainDiv}>
+                <div style={{width: 1084,  alignItems: "center", justifyContent: "center", margin: "auto"}}>
 
-                <div className={style.breadCrams}>
-                    <Link href="/" style={{textDecoration: "none", color: "gray"}}>
-                        <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
-                    </Link>
+                    <div className={style.breadCrams}>
+                        <Link href="/" style={{textDecoration: "none", color: "gray"}}>
+                            <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
+                        </Link>
 
-                    <span style={{color: "black"}}>Проекты и решения</span>
+                        <span style={{color: "black"}}>Проекты и решения</span>
+                    </div>
+                    <div className={style.title}>Проекты и решения</div>
+
                 </div>
-                <div className={style.title}>Проекты и решения</div>
-
-            </div>
-            {itemProject.map((item , index)=>(
-                <div key={index} className={styleProject.cardProject}>
-                <span>
-                    <img src={item.img}/>
+                {itemProject.map((item , index)=>(
+                    <div key={index} className={styleProject.cardProject}>
+                <span style={{width: "50%"}}>
+                    <img style={{width: "100%"}} src={item.img}/>
                 </span>
-                    <span style={{}}>
+                        <span style={{}}>
                     <div style={{ height: 100, paddingTop: 58, paddingLeft: 40, }}   className={styleProject.title}>
                             {item.title}
                     </div>
@@ -96,36 +98,39 @@ export default function project ({cardText, tekhnologii, modeliSotrudnichestva,s
                     </div>
                         </Link>
                 </span>
+                    </div>
+                ))}
+            </div>
+            <div className={styleProject.mainDivMobile}>
+                <div className={styleContact.breadCramsMobile}>
+                    <Link  style={{textDecoration: "none", color: "black", opacity: 0.7}} href={`/`}>
+                        <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
+                    </Link>
+                    <span style={{color: "black"}}>Проекты и Решения</span>
                 </div>
-            ))}
+
+                <div className={styleContact.titleMobile}>Проекты и Решения</div>
+                {itemProject.map((item , index)=>(
+                    <div key={index} style={{backgroundColor: "#eef4fc"}}>
+                        <span style={{width: "100%", }}>
+                            <img style={{width: "90%", marginLeft: "5%" }} src={item.img}/>
+                        </span>
+                        <div  className={styleProject.titleMobile}>
+                            {item.title}
+                        </div>
+                    <div  className={styleProject.subTitleMobile}>
+                       {item.description}
+                    </div>
+                        <Link style={{textDecoration: "none"}} href={item.link}>
+                           <div style={{  height: 100, paddingLeft: "5%"}}  className={styleProject.nextButtonMobile}>
+                        подробнее <img style={{position: "absolute", paddingTop: 4, paddingLeft: 15}} src="../Arrow2.svg"/>
+                    </div>
+                        </Link>
+                    </div>
+                ))}
 
 
-            {/*<div className={styleProject.cardProject}>*/}
-            {/*    <span>*/}
-            {/*        <img src="../projectBeautyHouse.png"/>*/}
-            {/*    </span>*/}
-            {/*    <span style={{}}>*/}
-            {/*        <div style={{ height: 100, paddingTop: 58, paddingLeft: 40, }}   className={styleProject.title}>*/}
-            {/*                BeautyHouse.by*/}
-            {/*        </div>*/}
-            {/*        <div style={{ height: 300, paddingTop: 20, paddingLeft: 40, paddingRight: 54}}   className={styleProject.subTitle}>*/}
-            {/*            Данный проект создавался для работы по схеме B2B. Клиентская*/}
-            {/*            база данного web приложения насчитывает более 1000 пользователей,*/}
-            {/*            которые являются крупными и средними организациями по реализации*/}
-            {/*            бытовой продукции и продуктов питания на территории РБ. Данный сайт*/}
-            {/*            позволяет легко и быстро сформировать карзину и оформить заказ благодаря*/}
-            {/*            современному подходу к реализации всех задумак...*/}
-            {/*        </div>*/}
-            {/*        <div style={{  height: 100, paddingLeft: 40}}  className={styleProject.nextButton}>*/}
-            {/*            подробнее*/}
-            {/*        </div>*/}
-            {/*    </span>*/}
-            {/*</div>*/}
-
-
-
-
-
+            </div>
 
             <Cooperation2 modeliSotrudnichestva={modeliSotrudnichestva}/>
             <Partners/>

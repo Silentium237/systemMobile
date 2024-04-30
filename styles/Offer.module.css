@@ -29,6 +29,58 @@
 .mainDivMobile {
     padding-top: 70px;
 }
+.divMainInfo {
+    background-image: linear-gradient(to bottom right, #c2e8ff, #a8d0ff);
+    width: calc( (100vw - 768px)/(2400 - 768) * (1078 - 600) + 600px);
+    margin: auto;
+    height: calc( (100vw - 768px)/(2400 - 768) * (450 - 200) + 200px);
+}
+.divMainInfoMobile {
+    background-image: linear-gradient(to bottom right, #c2e8ff, #a8d0ff);
+    width: 100%;
+    margin: auto;
+}
+.blockDiv {
+    display: flex;
+    justify-content: space-between;
+}
+.imgForFree {
+    width: calc( (100vw - 768px)/(1900 - 768) * (200 - 100) + 100px);
+}
+.imgForFreeMobile {
+    width: calc( (100vw - 300px)/(1900 - 300) * (200 - 80) + 80px);
+}
+.blockSpan {
+    z-index: 777;
+    padding-left:  calc( (100vw - 768px)/(1900 - 768) * (80 - 20) + 20px);
+    padding-top: calc( (100vw - 768px)/(1900 - 768) * (165 - 20) + 20px);
+}
+.imgLine {
+    position: absolute;
+    left: 21%;
+    width: calc( (100vw - 768px)/(1900 - 768) * (1000 - 600) + 600px);
+}
+.imgLineMobile {
+    position: absolute;
+    width: 100%;
+}
+.buttonSendMessage {
+    width: calc( (100vw - 768px)/(1900 - 768) * (270 - 200) + 200px);
+    height: calc( (100vw - 480px)/(1900 - 480) * (56 - 30) + 30px);
+
+    margin-left: 40px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    border: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #0092FF;
+    cursor: pointer;
+    padding-top: 5px;
+}
 
 @media screen and (max-width: 815px) {
     .mainDiv {

@@ -42,7 +42,7 @@ export default function MobileMenu({services, tekhnologii}) {
         },
         {
             title: "УСЛУГИ",
-            showRightButton: true,
+            showRightButton: false,
             link: "/service"
         },
         // {
@@ -52,12 +52,61 @@ export default function MobileMenu({services, tekhnologii}) {
         {
             title: "ПРОЕКТЫ И РЕШЕНИЯ",
             showRightButton: true,
-            link: "/"
+            link: "/project"
         },
         {
             title: "КОНТАКТЫ",
             showRightButton: false,
             link: "/contact"
+        },
+
+    ]
+
+    let itemProject = [
+        {   title: "B2BSellwin.by",
+            img: "../projectB2B.png",
+            description: "Данный проект создавался для работы по схеме B2B. К" +
+                "лиентская база данного web приложения насчитывает более 1000 пользователей, " +
+                "которые являются крупными и средними организациями по реализации бытовой " +
+                "продукции и продуктов питания на территории РБ. Данный сайт " +
+                "позволяет легко и быстро сформировать карзину и оформить заказ ...",
+            link: "/projectB2B"
+        },
+        {   title: "BeautyHouse.by",
+            img: "../projectBeautyHouse.png",
+            description: "BeautyHouse - это огромный дом, предназначение которого делать" +
+                " людей еще более красивыми, а значит и окружающий мир. " +
+                "На данном портале присутствует поистине огромное количество" +
+                " разнообразной косметики по уходу за всем телом.",
+            link: "/projectB2B"
+        },
+        {   title: "Oil-motor.by",
+            img: "../projectOilMotor.png",
+            description: "Как известно: 'Движение - это жизнь'. А что бы это " +
+                "движение длилось как можно дольше," +
+                " необходимо смазывать. Oil Motor сайт, где вы найдете" +
+                " весь спектр масел для любого авто. А удобная навигация и" +
+                " грамотно написаный год не отнимет у Вас много времени " +
+                "от выбора товара до оформления покупки.  ",
+            link: "/projectB2B"
+        },
+        {   title: "pmlogistic.sellwin.by",
+            img: "../projectPMLogistic.png",
+            description: "Если Ваша деятельность связана с огромным количеством " +
+                "доставок и большим оборотам товара в различных точках страны," +
+                " то без онлайн мониторинга не обойтись. " +
+                "Наше решение позволило своевременно реагировать " +
+                "на проблемы при приемке товара, отслеживать перемещение, " +
+                "мониторить транспортные расходы и многое другое",
+            link: "/projectB2B"
+        },
+        {   title: "Shop.sellwin.by",
+            img: "../projectShopSellwin.png",
+            description: "Для любителей вкусняшек и чистюль" +
+                ", был создан данный сайт. На котом представлены " +
+                "одни из лучших товаров на территории РБ по очень" +
+                " привлекательным ценам. Удобный и очень быстрый сайтик! ",
+            link: "/projectB2B"
         },
 
     ]
@@ -121,6 +170,30 @@ export default function MobileMenu({services, tekhnologii}) {
                     </span>
                             </div>
                         ) )}
+                    </> : null}
+                    {openService === "ПРОЕКТЫ И РЕШЕНИЯ" ? <>
+                        {itemProject.map((item, index)=> (
+                            <Link key={index} href={item.link} style={{textDecoration: "none"}}>
+                                    <div  style={{display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "space-between",
+                                        margin: "auto",
+                                        marginLeft: "5%",
+                                        marginRight: "5%", paddingBottom: 15 , paddingTop: 10}}>
+                                        <span style={{width: "30%",}}>
+                                            <img style={{width: "70%"}} src={item.img}/>
+                                        </span>
+                                        <span style={{width: "70%", height: 50}}>
+                                            <div className={styles.titleProjectMobile}>
+                                            {item.title}
+                                            </div>
+                                            <div className={styles.subTitleProjectMobile}>
+                                                {item.description}
+                                            </div>
+                                        </span>
+                                    </div>
+                            </Link>
+                        ))}
                     </> : null}
                     {/*{openService === "УСЛУГИ" ? <>*/}
                     {/*    {services && services.data && services.data.length ? services.data.map((item, index)=> (*/}

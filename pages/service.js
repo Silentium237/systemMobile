@@ -10,10 +10,12 @@ import styleTechno from "../styles/MainTechnoPage.module.css";
 export default function service ({services, tekhnologii, modeliSotrudnichestva}){
 
     const [showCard , setShowCard] = useState(false)
+    const [showCardAllTextIndex , setShowCardAllTextIndex] = useState(555)
     const ClickButtonShowCard = () =>{
         setShowCard(!showCard)
     }
 
+    console.log(services)
     return(
         <MainContainer services={services} tekhnologii={tekhnologii} >
             <>
@@ -45,17 +47,21 @@ export default function service ({services, tekhnologii, modeliSotrudnichestva})
                                 {!item.name.includes("1C") ?
                                 <>
                                         {index < 6 || showCard ?
-                                            <div key={index} className={style.cardStyle} style={{margin:10}}>
-                                                <img src={item.preview_img}/>
+                                            <div key={index} className={index === showCardAllTextIndex ? style.cardStyleAll :style.cardStyle} style={{margin:10}}>
+                                                <img style={index === showCardAllTextIndex ? {width: "100%"}:{}} src={item.preview_img}/>
                                                 <div className={style.titleCardText}>
                                                     {item.name}
                                                 </div>
-                                                <div className={style.subTitleCardText}>
+                                                <div className={index === showCardAllTextIndex ? style.subTitleCardTextAll : style.subTitleCardText}>
                                                     {item.preview_text}
                                                 </div>
-                                                <div className={style.nextButtonStyle} >
-                                                    Подробнее <img style={{position: "absolute", paddingTop: 4, paddingLeft: 15, cursor: "pointer"}} src="../Arrow2.svg"/>
-                                                </div>
+                                                {index === showCardAllTextIndex ?  <div className={style.nextButtonStyle} onClick={()=>setShowCardAllTextIndex(555) }>
+                                                    Свернуть
+
+                                                </div> : <div className={style.nextButtonStyle} onClick={()=>setShowCardAllTextIndex(index) }>
+                                                        Подробнее <img style={{position: "absolute", paddingTop: 4, paddingLeft: 15, cursor: "pointer"}} src="../Arrow2.svg"/>
+                                                </div>}
+
                                             </div> : null
                                         }
                                     </> : null
@@ -74,7 +80,7 @@ export default function service ({services, tekhnologii, modeliSotrudnichestva})
                     <div style={{maxWidth: 1084,  alignItems: "center", justifyContent: "center", margin: "auto"}}>
 
                         <div className={style.breadCramsMobile}>
-                            <Link  style={{textDecoration: "none", color: "black", opacity: 0.7}} href={`/`}>
+                            <Link  style={{textDecoration: "none", color: "gray", opacity: 0.7}} href={`/`}>
                                 <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
                             </Link>
                             <span style={{color: "black"}}>Услуги</span>
@@ -97,15 +103,19 @@ export default function service ({services, tekhnologii, modeliSotrudnichestva})
                                 <div className={style.titleCardTextMobile}>
                                     {item.name}
                                 </div>
-                                <div className={style.subTitleCardTextMobile}>
+                                <div className={index === showCardAllTextIndex ? style.subTitleCardTextMobileAll : style.subTitleCardTextMobile}>
                                     {item.preview_text}
                                 </div>
-                                <Link style={{textDecoration: "none"}} href={`/techno/${item.id}`}>
-                                    <div className={styleTechno.buttonNext}>
+                                {index === showCardAllTextIndex ?  <>
+                                    <div className={styleTechno.buttonNext} onClick={()=>setShowCardAllTextIndex(555) }>
+                                        Свернуть
+                                    </div>
+                                </> : <>
+                                    <div className={styleTechno.buttonNext} onClick={()=>setShowCardAllTextIndex(index) }>
                                         Подробнее <img style={{position: "absolute", paddingTop: 4, paddingLeft: 15}}
                                                        src="../Arrow2.svg"/>
                                     </div>
-                                </Link>
+                                </>}
                             </div>
                         )) : null}
                     </div>

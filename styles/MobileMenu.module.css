@@ -29,6 +29,26 @@
     top: 75%;
 }
 
+.subTitleProjectMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #cccccc;
+    margin: 0; /* Убираем внешний отступ */
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+}
+.titleProjectMobile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    padding-bottom: 5px;
+}
 
 @media screen and (min-width: 815px) {
     .mainDiv {

@@ -13,12 +13,30 @@
     line-height: 155%;
     color: rgba(0, 0, 0, 0.5);
 }
+.cardTitleMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 5%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
 .cardSubTitle {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 155%;
     color: rgba(0, 0, 0, 0.8);
+}
+.cardSubTitleMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 5%;
 }
 .li {
     font-style: normal;
@@ -32,6 +50,22 @@
     width: 355px;
     height: 70px;
     background: #125E97;
+}
+.buttonVideoMobile {
+    width: 295px;
+    height: 56px;
+    background: #125E97;
+    margin: auto;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 0px;
+}
+.buttonVideoMobile:hover {
+
+    background: #407DAA;
+
 }
 .buttonVideoText {
     font-style: normal;
@@ -128,4 +162,34 @@
     text-transform: uppercase;
     color: #FFFFFF;
     padding-top: 25px;
+}
+.mainDescriptionMobile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 5%;
+    text-transform: uppercase;
+    color: #000000;
+    padding-top: 25px;
+}
+.mainTextDescriptionMobile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+@media screen and (min-width: 815px) {
+    .mainDivMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 815px) {
+    .mainDiv{
+        display: none;
+    }
+
 }

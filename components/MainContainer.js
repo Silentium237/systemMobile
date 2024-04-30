@@ -29,6 +29,8 @@ const MainContainer = ({children, keywords, services, tekhnologii}) => {
         {name: "ПРОЕКТЫ И РЕШЕНИЯ", link: "/project"}
     ]
 
+
+
     return (
         <>
             <MobileMenu services={services} tekhnologii={tekhnologii} />

@@ -5,7 +5,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 1084px;
+    max-width: 1084px;
     height: 450px;
     margin-top: 60px;
 }
@@ -17,13 +17,39 @@
     text-transform: uppercase;
     color: #000000;
 }
+.titleMobile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-left: 5%;
+    padding-top: 15px;
+
+}
 .subTitle {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: calc( (100vw - 768px)/(2400 - 768) * (16 - 12) + 12px);
     line-height: 155%;
     color: rgba(0, 0, 0, 0.8);
     width: 378px;
+}
+.subTitleMobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 .nextButton {
     font-style: normal;
@@ -31,4 +57,24 @@
     font-size: 16px;
     line-height: 100%;
     color: #006DBF;
+}
+.nextButtonMobile {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #006DBF;
+    padding-top: 10px;
+}
+
+@media screen and (min-width: 815px) {
+    .mainDivMobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 815px) {
+    .mainDiv{
+        display: none;
+    }
+
 }

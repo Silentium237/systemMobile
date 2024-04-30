@@ -165,7 +165,7 @@ export default function WriteMe() {
                         </button>
                             </Box>
            </span>
-                <img src="./writeMe.png" style={{width: "100%", paddingBottom: 320}} />
+                <img src="/writeMe.png" style={{width: "100%", paddingBottom: 320}} />
                 <img style={{width: "100%", paddingBottom: 100}} src="../Group59.svg"/>
             </div>
 

@@ -31,8 +31,8 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
             <div className={styleTechnoOne.mainDiv}>
                 <div style={{maxWidth: 1084, alignItems: "center", justifyContent: "center", margin: "auto"}}>
                     <div className={style.breadCrams}>
-                        <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
-                        <span>Технологии &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span>
+                        <Link href={"/"} style={{textDecoration: "none", color: "gray"}}> <span>Главная &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span></Link>
+                        <Link href={"/techno"} style={{textDecoration: "none", color: "gray"}}> <span>Технологии &nbsp;   <img src="../breadPosition.svg"/> &nbsp; </span></Link>
                         <span style={{color: "black"}}>{value.data.name}</span>
                     </div>
                 </div>
@@ -46,19 +46,6 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
                 <div className={styleTechnoOne.title}>
                     Преимущества
                 </div>
-                {/*<div className={styleTechnoOne.smallCardBlock}>*/}
-                {/*    {array.map((item , index)=> (*/}
-                {/*        <span key={index} className={styleTechnoOne.smallCard}>*/}
-                {/*       <img style={{paddingTop: 34, paddingLeft: 34}} src={item.icon}/>*/}
-                {/*       <div className={styleTechnoOne.bigNumber}>*/}
-                {/*           {item.number}*/}
-                {/*       </div>*/}
-                {/*        <div className={styleTechnoOne.smallCardText}>*/}
-                {/*            {item.text}*/}
-                {/*        </div>*/}
-                {/*   </span>*/}
-                {/*    ))}*/}
-                {/*</div> */}
                 <div className={styleTechnoOne.smallCardBlock}>
                     {value.data.link.map((item, index) => (
                         <>
@@ -70,7 +57,8 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
                                       style={{
                                           backgroundImage: `url(${item.img})`,
                                           backgroundRepeat: "no-repeat",
-                                          backgroundSize: "cover"
+                                          backgroundSize: "cover",
+                                          cursor: "pointer"
                                       }}
                                 >
                                 <div className={styleTechnoOne.smallCardText}
@@ -79,7 +67,8 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
                                          maxWidth: 340,
                                          height: 387,
                                          paddingTop: 25,
-                                         opacity: 0.75
+                                         opacity: 0.95,
+                                         cursor: "pointer"
                                      }}>
                                     {item.text}
                                 </div>
@@ -91,11 +80,12 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
                                       style={{
                                           backgroundImage: `url(${item.img})`,
                                           backgroundRepeat: "no-repeat",
-                                          backgroundSize: "cover"
+                                          backgroundSize: "cover",
+                                          cursor: "pointer"
                                       }}
                                 >
                         <div className={styleTechnoOne.smallCardTitleText}
-                             style={{marginTop: index * 70, maxWidth: 340,  paddingTop: 25, opacity: 0.75}}>
+                             style={{marginTop: index * 70, maxWidth: 340,  paddingTop: 40, opacity: 0.95}}>
                             {item.name}
                         </div>
                </span>
@@ -105,82 +95,6 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
 
                     ))}
 
-                    {value.data.link.map((item, index) => (
-                        <>
-                            {showCardInfo && index === indexToShowCardInfo ?
-                                <span key={index}
-                                      onClick={() => showAdvantage(index)}
-                                      onMouseLeave={() => showAdvantage()}
-                                      className={styleTechnoOne.smallCard}
-                                      style={{
-                                          backgroundImage: `url(${item.img})`,
-                                          backgroundRepeat: "no-repeat",
-                                          backgroundSize: "cover"
-                                      }}
-                                >
-                            <div className={styleTechnoOne.smallCardText} style={{backgroundColor: "#b4ddfa", width: 348, height: 387, paddingTop: 25, opacity: 0.75}}>
-                        {item.text}
-                    </div>
-               </span>
-                                :
-                                <span key={index}
-                                      onClick={() => showAdvantage(index)}
-                                      className={styleTechnoOne.smallCard}
-                                      style={{
-                                          backgroundImage: `url(${item.img})`,
-                                          backgroundRepeat: "no-repeat",
-                                          backgroundSize: "cover"
-                                      }}
-                                >
-                        <div className={styleTechnoOne.smallCardTitleText}
-                             style={{marginTop: index * 70, width: 340,  paddingTop: 25, opacity: 0.75}}>
-                            {item.name}
-                        </div>
-               </span>
-                            }
-                        </>
-
-
-                    ))}
-
-
-                    {value.data.link.map((item, index) => (
-                        <>
-                            {showCardInfo && index === indexToShowCardInfo ?
-                                <span key={index}
-                                      onClick={() => showAdvantage(index)}
-                                      onMouseLeave={() => showAdvantage()}
-                                      className={styleTechnoOne.smallCard}
-                                      style={{
-                                          backgroundImage: `url(${item.img})`,
-                                          backgroundRepeat: "no-repeat",
-                                          backgroundSize: "cover"
-                                      }}
-                                >
-                            <div className={styleTechnoOne.smallCardText} style={{backgroundColor: "#b4ddfa", width: 348, height: 387, paddingTop: 25, opacity: 0.75}}>
-                        {item.text}
-                    </div>
-               </span>
-                                :
-                                <span key={index}
-                                      onClick={() => showAdvantage(index)}
-                                      className={styleTechnoOne.smallCard}
-                                      style={{
-                                          backgroundImage: `url(${item.img})`,
-                                          backgroundRepeat: "no-repeat",
-                                          backgroundSize: "cover"
-                                      }}
-                                >
-                        <div className={styleTechnoOne.smallCardTitleText}
-                             style={{marginTop: index * 70, width: 340,  paddingTop: 25, opacity: 0.75}}>
-                            {item.name}
-                        </div>
-               </span>
-                            }
-                        </>
-
-
-                    ))}
                 </div>
 
 
@@ -192,23 +106,7 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
                     <span className={styleTechnoOne.textMainInfoBlock}>
                         {value.data.detail_text}
                     </span>
-
                     <span>
-                    {/*{ value.data.name.includes("1С:") ?*/}
-                        {/*    <>*/}
-                        {/*        <div style={{width: 546, height: 570, backgroundColor: "#fdba06"}}>*/}
-                        {/*            <div style={{fontSize: 52, fontWeight: "bold", color: "#7c3300", padding: 20}}>{value.data.name}</div>*/}
-                        {/*            <div style={{position: "absolute", width: 200, height: 410, background: "linear-gradient(#fdba06, #d25e01)"}}>*/}
-
-                        {/*            </div>*/}
-                        {/*            <img src="../ico_1c_logo_opt.svg" style={{width: 200, height: 100, float: "right", marginTop: 270, marginRight: 50}}/>*/}
-                        {/*            /!*<img src={value.data.detail_img}/>*!/*/}
-                        {/*        </div>*/}
-                        {/*    </> :  */}
-                        {/*    */}
-                        {/*    <img src={value.data.detail_img} style={{width: 532, height: 572}}/>*/}
-                        {/*}*/}
-
                         <img src={value.data.detail_img} style={{maxWidth: 532, height: 572}}/>
                 </span>
                 </div>
@@ -241,18 +139,6 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
                     Преимущества
                 </div>
                 <div className={styleTechnoOne.smallCardBlockMobile}>
-                    {/*{value.data.link.map((item, index) => (*/}
-                    {/*    <>*/}
-
-                    {/*                <img src={item.img} style={{height:200}} />*/}
-                    {/*        <div>{item.name}</div>*/}
-                    {/*                <div style={{position: "absolute", marginTop: -400}}>{item.text}</div>*/}
-
-
-
-                    {/*    </>*/}
-                    {/*))}*/}
-
                     {value.data.link.map((item, index) => (
                         <>
                                 <span key={index}
@@ -265,7 +151,7 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
                                       }}
                                 >
                                    <div className={styleTechnoOne.smallCardTitleTextMobile}
-                                        style={{marginTop: 110, width: "100%",  paddingTop: 15, opacity: 0.75}}>
+                                        style={{marginTop: 110, width: "100%",  paddingTop: 15, opacity: 0.95}}>
                                        <div style={{marginLeft: "5%"}}>
                                            {item.name}
                                        </div>
@@ -278,77 +164,7 @@ export default function technologiesOne({value, modeliSotrudnichestva, tekhnolog
                                      width: "100%",
                                      height: "auto",
                                      paddingTop: 25,
-                                     opacity: 0.75,
-                                     marginRight: "5%"
-                                 }}>
-                                <div style={{marginLeft: "5%", marginRight: "5%", marginBottom: "5%"}}>
-                                    {item.text}
-                                </div>
-
-                            </div>
-                        </>
-                    ))}
-                    {value.data.link.map((item, index) => (
-                        <>
-                                <span key={index}
-                                      className={styleTechnoOne.smallCardMobile}
-                                      style={{
-                                          backgroundImage: `url(${item.img})`,
-                                          backgroundRepeat: "no-repeat",
-                                          backgroundSize: "cover",
-                                          height: 161
-                                      }}
-                                >
-                                   <div className={styleTechnoOne.smallCardTitleTextMobile}
-                                        style={{marginTop: 110, width: "100%",  paddingTop: 15, opacity: 0.75}}>
-                                       <div style={{marginLeft: "5%"}}>
-                                           {item.name}
-                                       </div>
-                                   </div>
-
-                                </span>
-                            <div className={styleTechnoOne.smallCardTextMobile}
-                                 style={{
-                                     backgroundColor: "#FFFFFF",
-                                     width: "100%",
-                                     height: "auto",
-                                     paddingTop: 25,
-                                     opacity: 0.75,
-                                     marginRight: "5%"
-                                 }}>
-                                <div style={{marginLeft: "5%", marginRight: "5%", marginBottom: "5%"}}>
-                                    {item.text}
-                                </div>
-
-                            </div>
-                        </>
-                    ))}
-                    {value.data.link.map((item, index) => (
-                        <>
-                                <span key={index}
-                                      className={styleTechnoOne.smallCardMobile}
-                                      style={{
-                                          backgroundImage: `url(${item.img})`,
-                                          backgroundRepeat: "no-repeat",
-                                          backgroundSize: "cover",
-                                          height: 161
-                                      }}
-                                >
-                                   <div className={styleTechnoOne.smallCardTitleTextMobile}
-                                        style={{marginTop: 110, width: "100%",  paddingTop: 15, opacity: 0.75}}>
-                                       <div style={{marginLeft: "5%"}}>
-                                           {item.name}
-                                       </div>
-                                   </div>
-
-                                </span>
-                            <div className={styleTechnoOne.smallCardTextMobile}
-                                 style={{
-                                     backgroundColor: "#FFFFFF",
-                                     width: "100%",
-                                     height: "auto",
-                                     paddingTop: 25,
-                                     opacity: 0.75,
+                                     opacity: 0.95,
                                      marginRight: "5%"
                                  }}>
                                 <div style={{marginLeft: "5%", marginRight: "5%", marginBottom: "5%"}}>
