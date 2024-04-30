@@ -10,6 +10,7 @@ import Link from "next/link";
 import {Button} from "@mui/material";
 
 import styleOurValue from "../styles/OurValue.module.css";
+import styles from "../styles/Cooperation.module.css";
 
 
 
@@ -392,15 +393,21 @@ export default function projectMMM ({cardText, tekhnologii, modeliSotrudnichestv
                 {showText ? <div className={styleProject.mainTextDescriptionMobile} >
                     {mainTextDescription[1]}
                 </div>: null}
-                <Button className={styleProject.buttonVideoMobile} style={{marginTop: 20, marginBottom: 60}}  onClick={()=> setShowText(!showText)}>
-                    читать полностью
-                </Button>
+                <div className={styles.readAllText} style={{marginTop: 30 }}
+                     onClick={()=> setShowText(!showText)}>{!showText ? "ЧИТАТЬ ПОЛНОСТЬЮ" : "СВЕРНУТЬ" }
+                </div>
+                <br/>
+                <br/>
+                <br/>
             </div>
 
 
 
 
-            <Cooperation2 modeliSotrudnichestva={modeliSotrudnichestva}/>
+            <div style={{paddingTop: 130}}>
+                <Cooperation2 modeliSotrudnichestva={modeliSotrudnichestva}/>
+            </div>
+
 
 
             <Partners/>
