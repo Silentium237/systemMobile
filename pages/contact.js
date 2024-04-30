@@ -66,8 +66,9 @@ export default function contact ({cardText, tekhnologii, modeliSotrudnichestva,s
                 from: 'onboarding@resend.dev',
                 to: 'vel7527727@gmail.com',
                 subject: 'Hello World',
-                html: "*Имя:* " + name + ". " + '\n' + "*Email:* " + email + ". " + '\n' + "*Телефон:* " + phone + ". " + '\n' + "*Текст сообщения:* " + text + ". " + '\n' + "*Организация:* " + companyName + ". " + '\n' + "*Отправка сообщения с SellwinSystem* "
+                html: `<p>Hello </p>`
           })
+            alert("56555")
         }catch (error){
             console.log(error)
         }
@@ -339,7 +340,7 @@ export default function contact ({cardText, tekhnologii, modeliSotrudnichestva,s
                                 />
                             </div>
                             <div className={styleContact.subTitleSendFormMobile}>Заполняя данную форму вы соглашаетесь на обработку и хранение
-                                <Link style={{color: "#125E97"}} href={'/'}> персональных данных</Link>
+                                <a style={{color: "#125E97"}} onClick={()=> setOpenPolicy(true)}> персональных данных</a>
                             </div>
                             <div>
                                 <TextField
